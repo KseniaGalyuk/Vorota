@@ -350,12 +350,265 @@ if (document.querySelector('.items-work_sectional')) {
 		// }
 	});
 };
+if (document.querySelector('.item-work__slider-h1')) {
+	new Swiper('.item-work__slider-h1', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h1',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h2')) {
+	new Swiper('.item-work__slider-h2', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h2',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h3')) {
+	new Swiper('.item-work__slider-h3', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h3',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h4')) {
+	new Swiper('.item-work__slider-h4', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h4',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h5')) {
+	new Swiper('.item-work__slider-h5', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h5',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h6')) {
+	new Swiper('.item-work__slider-h6', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h6',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h7')) {
+	new Swiper('.item-work__slider-h7', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h7',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h8')) {
+	new Swiper('.item-work__slider-h8', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h8',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
+if (document.querySelector('.item-work__slider-h9')) {
+	new Swiper('.item-work__slider-h9', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_h9',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade:true,
+		},
+	});
+};
 // Таблицы
 const priceControl = document.querySelector('.price__control');
 const priceButtons = document.querySelectorAll('.price__button');
 const priceTables = document.querySelectorAll('.table');
 const priceSelect = document.querySelector('.price__select select');
 const trs = document.querySelectorAll('tr');
+const tds = document.querySelectorAll('td');
 if (priceControl != null) {
 	priceControl.addEventListener('click', function (e) {
 		if (e.target.classList.contains("price__button") ) {
@@ -387,6 +640,20 @@ priceTables.forEach(priceTable => {
 	priceTable.addEventListener('mouseover', function (e) {
 		if (!e.target.classList.contains('table') && !isMobile.any()) {
 			e.target.classList.add('_hover');
+			if (e.target.dataset.tr) {
+				tds.forEach(td => {
+					if (td.dataset.td==e.target.dataset.tr) {
+						td.classList.add('_hover');
+					}
+					
+				});
+			} else {
+				tds.forEach(td => {
+					if (td.dataset.tr==e.target.dataset.td) {
+						td.classList.add('_hover');
+					}
+				});
+			}
 			const trParent = e.target.parentElement;
 			trParent.classList.add('_hover');
 			for (let i = trParent.children.length; i > 0; i--) {
@@ -409,6 +676,20 @@ priceTables.forEach(priceTable => {
 	priceTable.addEventListener('mouseout', function (e) {
 		if (!e.target.classList.contains('table') && !isMobile.any()) {
 			e.target.classList.remove('_hover');
+			if (e.target.dataset.tr) {
+				tds.forEach(td => {
+					if (td.dataset.td==e.target.dataset.tr) {
+						td.classList.remove('_hover');
+					}
+					
+				});
+			} else {
+				tds.forEach(td => {
+					if (td.dataset.tr==e.target.dataset.td) {
+						td.classList.remove('_hover');
+					}
+				});
+			}
 			const trParent = e.target.parentElement;
 			trParent.classList.remove('_hover');
 			for (let i = trParent.children.length; i > 0; i--) {
@@ -434,11 +715,25 @@ priceTables.forEach(priceTable => {
 			trs.forEach(tr => {
 				tr.classList.remove('_active');
 				const trChilds = tr.children
-				trChilds.forEach(trChild => {
-					trChild.classList.remove('_active');
-				});
+				for (let index = 0; index < trChilds.length; index++) {
+					trChilds[index].classList.remove('_active');
+				}
 			});
 			e.target.classList.add('_active');
+			if (e.target.dataset.tr) {
+				tds.forEach(td => {
+					if (td.dataset.td==e.target.dataset.tr) {
+						td.classList.add('_active');
+					}
+					
+				});
+			} else {
+				tds.forEach(td => {
+					if (td.dataset.tr==e.target.dataset.td) {
+						td.classList.add('_active');
+					}
+				});
+			}
 			const trParent = e.target.parentElement;
 			trParent.classList.add('_active');
 			for (let i = trParent.children.length; i > 0; i--) {

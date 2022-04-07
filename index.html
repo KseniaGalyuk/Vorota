@@ -6,16 +6,13 @@
 	<meta name="format-detection" content="telephone=no">
 	<!-- Подключени слайдера swiper -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-
+	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="img/favicon/">
+	<!-- <link rel="shortcut icon" href="img/favicon/"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Подключение скролла -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"> -->
-	<title></title>
+	<title>Ворота</title>
 </head>
 
 <body>
@@ -1019,10 +1016,10 @@
 								<option value="other" data-work="sectional">Другие услуги</option>
 							</select>
 						</div>
-						<div class="price__tables">
+						<div data-simplebar class="price__tables">
 							<div class="price__table">
 								<table data-price="rollback" class="table table_1 _active">
-									<tr class="table__header table__row">
+									<tr class="table__header">
 										<th class="table__col1">
 											<p><span class="table__icon"><img src="img/table/arrow-down.svg" alt=""></span> Высота
 											</p>
@@ -1035,82 +1032,82 @@
 										<th class="table__col4">2800</th>
 										<th class="table__col5">2600</th>
 									</tr>
-									<tr class="table__row">
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td rowspan="2">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td>Балка</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__row">
-										<td rowspan="3">Фурнитура</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+									<tr>
+										<td rowspan="3" data-tr="one">2100</td>
+										<td class="one">Алютех сэндвич алюминий</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+									</tr>
+									<tr>
+										<td rowspan="3" data-tr="two">2100</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+									</tr>
+									<tr>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+									</tr>
+									<tr>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+									</tr>
+									<tr>
+										<td rowspan="2" data-tr="three">2100</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+									</tr>
+									<tr>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+									</tr>
+									<tr>
+										<td data-tr="four">Балка</td>
+										<td data-td="four">Алютех сэндвич алюминий</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
+									</tr>
+									<tr>
+										<td rowspan="3" data-tr="five">Фурнитура</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+									</tr>
+									<tr>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+									</tr>
+									<tr>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 								</table>
 							</div>
@@ -1130,81 +1127,81 @@
 										<th class="table__col5">2600</td>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="one">2100</td>
+										<td class="one">Алютех сэндвич алюминий</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="two">2100</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="2">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="2" data-tr="three">2100</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Балка</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__bottom">
-										<td rowspan="3">Фурнитура</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-tr="four">Балка</td>
+										<td data-td="four">Алютех сэндвич алюминий</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="five">Фурнитура</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+									</tr>
+									<tr>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 								</table>
 							</div>
@@ -1224,81 +1221,81 @@
 										<th class="table__col5">2600</th>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="one">2100</td>
+										<td class="one">Алютех сэндвич алюминий</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="two">2100</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="2">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="2" data-tr="three">2100</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Балка</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__bottom">
-										<td rowspan="3">Фурнитура</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-tr="four">Балка</td>
+										<td data-td="four">Алютех сэндвич алюминий</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="five">Фурнитура</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+									</tr>
+									<tr>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 								</table>
 							</div>
@@ -1318,81 +1315,81 @@
 										<th class="table__col5">2600</th>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="one">2100</td>
+										<td class="one">Алютех сэндвич алюминий</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="two">2100</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="2">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="2" data-tr="three">2100</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Балка</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__bottom">
-										<td rowspan="3">Фурнитура</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-tr="four">Балка</td>
+										<td data-td="four">Алютех сэндвич алюминий</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="five">Фурнитура</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+									</tr>
+									<tr>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 								</table>
 							</div>
@@ -1412,81 +1409,81 @@
 										<th class="table__col5">2600</th>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="one">2100</td>
+										<td class="one">Алютех сэндвич алюминий</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
+										<td class="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="one">Алютех сэндвич алюминий</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
+										<td data-td="one">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="3">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="two">2100</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="two">Алютех сэндвич алюминий</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
+										<td data-td="two">81180</td>
 									</tr>
 									<tr>
-										<td rowspan="2">2100</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="2" data-tr="three">2100</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="three">Алютех сэндвич алюминий</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
+										<td data-td="three">81180</td>
 									</tr>
 									<tr>
-										<td>Балка</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
-									</tr>
-									<tr class="table__bottom">
-										<td rowspan="3">Фурнитура</td>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-tr="four">Балка</td>
+										<td data-td="four">Алютех сэндвич алюминий</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
+										<td data-td="four">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td rowspan="3" data-tr="five">Фурнитура</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 									<tr>
-										<td>Алютех сэндвич алюминий</td>
-										<td>81180</td>
-										<td>81180</td>
-										<td>81180</td>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+									</tr>
+									<tr>
+										<td data-td="five">Алютех сэндвич алюминий</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
+										<td data-td="five">81180</td>
 									</tr>
 								</table>
 							</div>
@@ -1519,20 +1516,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h1 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h1"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -1588,20 +1589,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h2 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h2"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -1657,20 +1662,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h3 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h3"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -1737,20 +1746,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h4 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h4"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -1758,7 +1771,7 @@
 												</div>
 											</div>
 											<div class="item-work__content">
-												<h3 class="item-work__title">Гаражные ворота Alutech 2200x1900 </h3>
+												<h3 class="item-work__title">Двери Alutech 2200x1900 </h3>
 												<div class="item-work__characteristics">
 													<div class="item-work__characteristic">
 														<p>Тип ворот</p>
@@ -1806,20 +1819,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h5 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h5"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -1827,7 +1844,7 @@
 												</div>
 											</div>
 											<div class="item-work__content">
-												<h3 class="item-work__title">Гаражные ворота Alutech 2200x1900 </h3>
+												<h3 class="item-work__title">Двери Alutech 2200x1900 </h3>
 												<div class="item-work__characteristics">
 													<div class="item-work__characteristic">
 														<p>Тип ворот</p>
@@ -1875,20 +1892,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h6 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h6"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -1896,7 +1917,7 @@
 												</div>
 											</div>
 											<div class="item-work__content">
-												<h3 class="item-work__title">Гаражные ворота Alutech 2200x1900 </h3>
+												<h3 class="item-work__title">Двери Alutech 2200x1900 </h3>
 												<div class="item-work__characteristics">
 													<div class="item-work__characteristic">
 														<p>Тип ворот</p>
@@ -1955,20 +1976,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h7 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h7"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -1976,7 +2001,7 @@
 												</div>
 											</div>
 											<div class="item-work__content">
-												<h3 class="item-work__title">Гаражные ворота Alutech 2200x1900 </h3>
+												<h3 class="item-work__title">Шлагбаумы Alutech 2200x1900 </h3>
 												<div class="item-work__characteristics">
 													<div class="item-work__characteristic">
 														<p>Тип ворот</p>
@@ -2024,20 +2049,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h8 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h8"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -2045,7 +2074,7 @@
 												</div>
 											</div>
 											<div class="item-work__content">
-												<h3 class="item-work__title">Гаражные ворота Alutech 2200x1900 </h3>
+												<h3 class="item-work__title">Шлагбаумы Alutech 2200x1900 </h3>
 												<div class="item-work__characteristics">
 													<div class="item-work__characteristic">
 														<p>Тип ворот</p>
@@ -2093,20 +2122,24 @@
 									<div class="work__item item-work swiper-slide">
 										<div class="item-work__container">
 											<div class="item-work__header">
-												<div class="item-work__slider">
-													<div class="item-work__slide _ibg"><img src="img/item-work/1.jpg" alt="">
+												<div class="item-work__slider item-work__slider-h9 swiper">
+													<div class="item-work__wrapper swiper-wrapper">
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/1.jpg" alt="">
+														</div>
+														<div class="item-work__slide swiper-slide _ibg">
+															<img src="img/item-work/2.jpg" alt="">
+														</div>
 													</div>
-													<!-- <div class="item-work__wrapper swiper-wrapper">
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slid swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
-														<div class="item-work__slide swiper-slide"><img src="img/item-work/1.jpg" alt="">
-														</div>
+													<div class="item-work__controls controls">
+														<div class="controls__pagination controls__pagination_h9"></div>
 													</div>
-													<div class="item-work__controls__pagination_im controls__pagination_1"></div> -->
 												</div>
 												<div class="item-work__button btn">
 													Закажите
@@ -2114,7 +2147,7 @@
 												</div>
 											</div>
 											<div class="item-work__content">
-												<h3 class="item-work__title">Гаражные ворота Alutech 2200x1900 </h3>
+												<h3 class="item-work__title">Шлагбаумы Alutech 2200x1900 </h3>
 												<div class="item-work__characteristics">
 													<div class="item-work__characteristic">
 														<p>Тип ворот</p>
@@ -2238,7 +2271,7 @@
 							специалисту</a>
 					</div>
 					<div class="questions__body">
-						<div data-spollers data-one-spoller class="questions__list">
+						<div data-simplebar data-spollers data-one-spoller class="questions__list">
 							<div class="questions__item item-question">
 								<div data-spoller class="item-question__header">
 									<div class="item-question__icon"><img src="img/header/arrow-down.svg" alt=""></div>
@@ -2568,8 +2601,7 @@
 	</div> -->
 	<!-- Подключение скрипта слайдера swiper -->
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-	<!-- Подключение скрипта скролла -->
-	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script> -->
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 	<script src="js/script.js"></script>
 	<!-- Динамический адаптив, нужен для того, чтобы перемещать элемент куда угодно в коде с помощью data-da=".main-slider__body,991.98,2" (куда(блок, в котором будет находиться элемент) , когда, какой(отсчет с нуля)) -->
 	<script src="js/dynamic-adapt.js"></script>
