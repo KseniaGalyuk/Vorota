@@ -941,7 +941,7 @@ priceTables.forEach(priceTable => {
 		}
 	})
 });
-
+//Табы выполненных работ
 const workControl = document.querySelector('.work__control');
 const workButtons = document.querySelectorAll('.work__button');
 const workItems = document.querySelectorAll('.items-work');
@@ -973,7 +973,6 @@ if (workControl != null) {
 		});
 	})
 }
-
 // Меню бургер, открытие подменю каталога
 const iconMenu = document.querySelector('.icon-menu');
 const menuHeaderBody = document.querySelector('.menu-header__body');
@@ -1000,59 +999,7 @@ document.addEventListener('click', function (e) {
 		}
 });
 
-//спойлеры
-const iconQuestions = document.querySelectorAll('.question');
-//const iconsQuestions = document.querySelectorAll('.question__icon');
-if (iconQuestions.length > 0) {
-	spollers(iconQuestions);
-};
-function spollers(iconQuestions) {
-	iconQuestions.forEach(iconQuestion => {
-		iconQuestionBody(iconQuestion);
-		iconQuestion.addEventListener('click', setSpollersAction)
-	});
-}
-function iconQuestionBody(iconQuestion) {
-	if (!iconQuestion.classList.contains('_active')) {
-		iconQuestion.lastElementChild.hidden = true;
-	}
-}
-function setSpollersAction(e) {
-	const el = e.target;
-	const spollerBlock = el.closest('.question');
-	if (!spollerBlock.querySelectorAll('._slide').length) {
-		if (el.classList.contains('question__icon')) {
-			el.classList.toggle('_active');
-			el.parentNode.classList.toggle('_active');
-			spollerBlock.firstElementChild.classList.remove('_active');
-			_slideToggle(spollerBlock.lastElementChild, 500);
-		} if (el.classList.contains('question__title')) {
-			spollerBlock.firstElementChild.classList.toggle('_active');
-			el.parentNode.classList.toggle('_active');
-			_slideToggle(spollerBlock.lastElementChild, 500);
-		} if (el.classList.contains('question__text')) {
-			el.parentNode.classList.remove('_active');
-			el.previousElementSibling.classList.remove('_active');
-			spollerBlock.firstElementChild.classList.remove('_active');
-			_slideToggle(spollerBlock.lastElementChild, 500);
-		} else {
-			el.classList.toggle('_active');
-			spollerBlock.firstElementChild.nextElementSibling.classList.toggle('_active');
-			if (el.firstElementChild != null) {
-				el.firstElementChild.classList.toggle('_active');
-			}
-			_slideToggle(spollerBlock.lastElementChild, 500);
-		}
-	}
-	// e.preventDefault();
-}
-/*function hideSpollerBody(spollerBlock) {
-	const spoller_activeTitle = spollerBlock.querySelector('.question__title._active');
-	if (spoller_activeTitle) {
-		spoller_activeTitle.classList.remove('_active');
-		_slideUp(spoller_activeTitle.nextElementSibling, 500);
-	}
-}*/
+// Спойлеры
 let _slideUp = (target, duration = 500) => {
 	if (!target.classList.contains('_slide')) {
 		target.classList.add('_slide');
@@ -1115,18 +1062,6 @@ let _slideToggle = (target, duration = 500) => {
 		return _slideUp(target, duration);
 	}
 }
-// Спойлер фрилансера (Оставить функции _slideUp _slideDown _slideToggle)
-/*
-Для родителя слойлеров пишем атрибут data-spollers
-Для заголовков слойлеров пишем атрибут data-spoller
-Если нужно включать\выключать работу спойлеров на разных размерах экранов
-пишем параметры ширины и типа брейкпоинта.
-Например: 
-data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
-data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
-
-Если нужно что бы в блоке открывался болько один слойлер добавляем атрибут data-one-spoller
-*/
 const spollersArray = document.querySelectorAll('[data-spollers]');
 if (spollersArray.length > 0) {
 	// Получение обычных слойлеров
@@ -1240,42 +1175,7 @@ if (spollersArray.length > 0) {
 		}
 	}
 }
-//рейтинг звезд (на 5 звезд), при нажатии добавляется класс и ко всем следующим(блок надо перевернуть флексом, чтобы добавлялось к "предыдущим"), при повторном наведении сбрасывается, при уходе возвращается к предыдущему выбору.Каждой звезде надо задать id в обычном порядке, в одном рейтинге id 1.1, 1.2, 1.3 и т.д, в другом с другой цифры начинается
-const stars = document.querySelectorAll('.star-rating');
-let starActiv = new Array(5); //В этой переменной кол-во рейтингов + 1 (starActiv[0]) и сколько звезд в каком рейтинге выбрано
-if (stars.length > 0) {
-	for (let i = 0; i < stars.length; i++) {
-		stars[i].addEventListener('click', function (e) {
-			stars[i].classList.add('_active');
-			let d = Number(e.target.id);
-			starActiv[Math.floor(d)] = Math.round((Number(`${Math.floor(d)}.5`) - d) * 10);
-			for (let j = 1; j <= 5; j++) {
-				let newD = d + Number(`0.${j}`);
-				if (newD == `${Math.floor(newD)}.6`) break;
-				let elem = document.getElementById(newD.toFixed(1));
-				if (elem != null) {
-					elem.classList.add('_active');
-				}
-			};
-		});
-		stars[i].addEventListener('mouseover', function (e) {
-			stars[i].classList.remove('_active');
-			let d = Number(e.target.id);
-			for (let j = 1; j <= 5; j++) {
-				let newD = Number(`${Math.floor(d)}.${j}`);
-				document.getElementById(newD.toFixed(1)).classList.remove('_active');
-			};
-		});
-		stars[i].addEventListener('mouseout', function (e) {
-			let d = Number(e.target.id);
-			for (let j = 0; j <= starActiv[Math.floor(d)]; j++) {
-				let newD = Number(`${Math.floor(d)}.5`) - Number(`0.${j}`);
-				document.getElementById(newD).classList.add('_active');
-			}
-		});
-	};
-};
-//Прокрутка к началу строници
+//Прокрутка к началу строницы
 const scrollToTop = document.querySelectorAll('.scroll-to-top');
 if (scrollToTop.length > 0) {
 	for (let index = 0; index < questionsX.length; index++) {
