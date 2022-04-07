@@ -7,7 +7,7 @@
 
 //<Подключаем шрифты>=======================================================================================
 //&display=swap&subset=cyrillic-ext
-@import url('https://fonts.googleapis.com/css?family=Roboto:regular,500,600,700,900&display=swap&subset=cyrillic-ext');
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,600,700,900&display=swap&subset=cyrillic-ext");
 @import "_fonts";
 //</Подключаем шрифты>=======================================================================================
 
@@ -32,16 +32,16 @@ $md3: 47.99875; //767.98px
 $md4: 29.99875; //479.98px
 
 $black: #000;
-$lightBlack:#27282E;
-$gray:#3A3C48;
-$green:#238252;
-$blueOriginal:#0B5AB9;
-$blue:#5173B3;
-$lightBlue:#00B0F0;
-$darkWhite:#E5EEF7;
-$white: #FFFFFF;;
-$yellow:#FFC636;
-$red:#FA6534;
+$lightBlack: #27282e;
+$gray: #3a3c48;
+$green: #238252;
+$blueOriginal: #0b5ab9;
+$blue: #5173b3;
+$lightBlue: #00b0f0;
+$darkWhite: #e5eef7;
+$white: #ffffff;
+$yellow: #ffc636;
+$red: #fa6534;
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ШАБЛОНЫ>===========================================================================================================
@@ -96,6 +96,8 @@ body {
 @import "_header";
 @import "_footer";
 @import "_home";
+@import "_catalogHub";
+@import "_catalogGates";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================

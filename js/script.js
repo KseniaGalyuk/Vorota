@@ -7,6 +7,7 @@ var isMobile = { Android: function () { return navigator.userAgent.match(/Androi
 
 //*</ Общие переменные>==========================================================================================
 // swiper
+// Общие свайперы
 if (document.querySelector('.advantagas__slider')) {
 	new Swiper('.advantagas__slider', {
 		//Навигация
@@ -53,50 +54,6 @@ if (document.querySelector('.advantagas__slider')) {
 				slidesPerView: 3.5,
 				spaceBetween: 0,
 			}
-		}
-	});
-};
-if (document.querySelector('.catalog-page__slider')) {
-	new Swiper('.catalog-page__slider', {
-		//Навигация
-		pagination: {
-			el: '.controls__pagination_cp',
-			// Буллеты
-			//тип по умолчанию
-			type: 'bullets',
-			//можно ли на него нажимать
-			clickable: true,
-		},
-		//Переключение с помощью клавиатуры
-		keyboard: {
-			//включить/выключить
-			enabled: true,
-			//Только когда слайдер в пределах вьюпорта вкдючить/выключить
-			onlyInViewport: true,
-			// Управление клавишами pageUp/pageDown включить/выключить
-			pageUpDown: true,
-		},
-		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
-		slidesPerView: 1,
-		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
-		watchOverflow: true,
-		// Отступ между слайдами
-		 spaceBetween: 30,
-				// Arrows
-		navigation: {
-			nextEl: ".catalog-page__controls .controls__arrow_next",
-			prevEl: ".catalog-page__controls .controls__arrow_prev",
-		},
-		loop: true,
-		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
-		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-			},
-			600: {
-				slidesPerView: 1.4,
-			},
 		}
 	});
 };
@@ -200,6 +157,236 @@ if (document.querySelector('.discount__slider')) {
 		}
 	});
 };
+// Свайпер каталогов на 1 странице
+if (document.querySelector('.catalog-page__body')) {
+	new Swiper('.catalog-page__body', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_cp',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		keyboard: {
+			//включить/выключить
+			enabled: true,
+			//Только когда слайдер в пределах вьюпорта вкдючить/выключить
+			onlyInViewport: true,
+			// Управление клавишами pageUp/pageDown включить/выключить
+			pageUpDown: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".catalog-page__controls .controls__arrow_next",
+			prevEl: ".catalog-page__controls .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			450: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			600: {
+				slidesPerView: 1.8,
+			},
+			700: {
+				slidesPerView: 2.4,
+			},
+			850: {
+				slidesPerView: 20,
+			},
+		}
+	});
+};
+// Свайпер каталогов на 2 странице
+if (document.querySelector('.catalog-hub__body')) {
+	new Swiper('.catalog-hub__body', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_cc',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		keyboard: {
+			//включить/выключить
+			enabled: true,
+			//Только когда слайдер в пределах вьюпорта вкдючить/выключить
+			onlyInViewport: true,
+			// Управление клавишами pageUp/pageDown включить/выключить
+			pageUpDown: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".catalog-hub__controls .controls__arrow_next",
+			prevEl: ".catalog-hub__controls .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			450: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			600: {
+				slidesPerView: 1.8,
+			},
+			700: {
+				slidesPerView: 2.4,
+			},
+			850: {
+				slidesPerView: 20,
+			},
+		}
+	});
+};
+// Свайперы каталогов на 3 странице
+if (document.querySelector('.list-catalog-gutes__body_1')) {
+	new Swiper('.list-catalog-gutes__body_1', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_icg_1',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".list-catalog-gutes__controls_1 .controls__arrow_next",
+			prevEl: ".list-catalog-gutes__controls_1 .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			450: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			600: {
+				slidesPerView: 1.8,
+			},
+			767.98: {
+				slidesPerView: 20,
+			},
+		}
+	});
+};
+if (document.querySelector('.list-catalog-gutes__body_2')) {
+	new Swiper('.list-catalog-gutes__body_2', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_icg_2',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".list-catalog-gutes__controls_2 .controls__arrow_next",
+			prevEl: ".list-catalog-gutes__controls_2 .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			450: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			600: {
+				slidesPerView: 1.8,
+			},
+			767.98: {
+				slidesPerView: 20,
+			},
+		}
+	});
+};
+if (document.querySelector('.list-catalog-gutes__body_3')) {
+	new Swiper('.list-catalog-gutes__body_3', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_icg_3',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".list-catalog-gutes__controls_3 .controls__arrow_next",
+			prevEl: ".list-catalog-gutes__controls_3 .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			450: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			600: {
+				slidesPerView: 1.8,
+			},
+			767.98: {
+				slidesPerView: 20,
+			},
+		}
+	});
+};
+if (document.querySelector('.list-catalog-gutes__body_4')) {
+	new Swiper('.list-catalog-gutes__body_4', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_icg_4',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".list-catalog-gutes__controls_4 .controls__arrow_next",
+			prevEl: ".list-catalog-gutes__controls_4 .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			450: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			600: {
+				slidesPerView: 1.8,
+			},
+			767.98: {
+				slidesPerView: 20,
+			},
+		}
+	});
+};
+// Свайперы выполненых работ
 if (document.querySelector('.items-work_rollback')) {
 	new Swiper('.items-work_rollback', {
 		//Навигация
@@ -647,7 +834,7 @@ priceTables.forEach(priceTable => {
 					}
 					
 				});
-			} else {
+			} else if(e.target.dataset.td) {
 				tds.forEach(td => {
 					if (td.dataset.tr==e.target.dataset.td) {
 						td.classList.add('_hover');
@@ -683,7 +870,7 @@ priceTables.forEach(priceTable => {
 					}
 					
 				});
-			} else {
+			} else if(e.target.dataset.td){
 				tds.forEach(td => {
 					if (td.dataset.tr==e.target.dataset.td) {
 						td.classList.remove('_hover');
@@ -727,7 +914,7 @@ priceTables.forEach(priceTable => {
 					}
 					
 				});
-			} else {
+			} else if(e.target.dataset.td){
 				tds.forEach(td => {
 					if (td.dataset.tr==e.target.dataset.td) {
 						td.classList.add('_active');
