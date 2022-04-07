@@ -95,6 +95,9 @@
 		margin: -11px -9.5px;
 	}
 	&__wrapper {
+		@media (max-width: #{$md3 + em}) {
+			margin-bottom: 20px;
+		}
 		@media (min-width: #{$md3 + em}) {
 			display: flex;
 			align-items: center;

@@ -18,15 +18,17 @@
 			@include adaptiv-value(margin-bottom, 35, 20, 1);
 		}
 	}
+	&__body {
+		margin: -11px -9.5px;
+	}
 	&__wrapper {
 		@media (max-width: 850px) {
-			margin-bottom: 31px;
+			margin-bottom: 20px;
 		}
 		@media (min-width: 850px) {
 			display: flex;
 			align-items: center;
 			flex-wrap: wrap;
-			margin: -11px -9.5px;
 		}
 	}
 	&__item {
