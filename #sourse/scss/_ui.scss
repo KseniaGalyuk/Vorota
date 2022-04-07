@@ -1212,6 +1212,10 @@
 		left: 50%;
 		transform: translatex(-50%);
 		.swiper-pagination-bullet {
+			@media (max-width: #{$md3 + em}) {
+				width: 14px;
+				height: 14px;
+			}
 			background: $white;
 			opacity: 1;
 			&-active {

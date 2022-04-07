@@ -2242,6 +2242,13 @@ body._lock {
   opacity: 1;
 }
 
+@media (max-width: 47.99875em) {
+  .item-work__controls .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 .item-work__controls .swiper-pagination-bullet-active {
   background: #0B5AB9;
 }
