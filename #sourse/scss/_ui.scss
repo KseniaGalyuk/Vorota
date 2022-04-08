@@ -231,7 +231,7 @@
 		content: "";
 		width: 15px;
 		height: 8px;
-		background: url(../../img/item-work/arrow-down.svg) no-repeat;
+		background: url(../img/item-work/arrow-down.svg) no-repeat;
 		background-position: center;
 		position: absolute;
 		top: 50%;
@@ -1116,7 +1116,7 @@
 		box-sizing: border-box;
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 		border-radius: 15px;
-		overflow: hidden;
+		//overflow: hidden;
 		padding: 25px 30px 30px 30px;
 		display: flex;
 		@media (max-width: 889.98px) {
@@ -1138,14 +1138,13 @@
 		@include adaptiv-value(max-width, 528, 200, 1);
 		position: relative;
 		@include adaptiv-value(height, 296, 216, 1);
-		@media (min-width: 889.98px) {
-			border-radius: 5px;
-		}
+		border-radius: 5px;
 		@media (max-width: 889.98px) {
 			max-width: 638px;
 		}
 		@media (max-width: #{$md3 + em}) {
 			max-width: 698px;
+			border-radius: 15px 15px 0 0;
 		}
 	}
 	&__slide {
@@ -1492,7 +1491,7 @@
 	}
 	&__tables {
 		overflow-x: auto;
-		overflow-y: hidden;
+		//overflow-y: hidden;
 		appearance: none;
 		margin: -10px 0;
 		padding: 10px 0;
@@ -1671,20 +1670,30 @@
 			}
 		}
 	}
+
 	&__image {
-		@media (min-width: #{$md3 + em}) {
+		position: relative;
+		z-index: 2;
+		@media (min-width: #{$md2 + em}) {
 			flex: 0 0 333px;
 			@include adaptiv-value(flex-basis, 400, 333, 1);
-			@include adaptiv-value(height, 280, 213, 1);
-			left: 10px;
-			bottom: 5px;
 			margin-right: 10px;
 		}
 		@media (max-width: #{$md2 + em}) {
 			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+	&__img {
+		width: 100%;
+		@media (min-width: #{$md2 + em}) {
+			@include adaptiv-value(height, 280, 213, 1);
+			left: 10px;
+			bottom: 5px;
+		}
+		@media (max-width: #{$md2 + em}) {
 			@include adaptiv-value(height, 380, 213, 1);
 			left: 5px;
-			margin: 0 auto;
 		}
 		position: relative;
 		border-radius: 15px;
