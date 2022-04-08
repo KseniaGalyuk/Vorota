@@ -5598,6 +5598,12 @@ body._lock {
   }
 }
 
+@media (max-width: 61.99875em) {
+  .catalog-garage__sidebar:not(:last-child) {
+    margin-bottom: 70px;
+  }
+}
+
 @media (min-width: 61.99875em) {
   .catalog-garage__content {
     -webkit-box-flex: 1;

@@ -134,6 +134,11 @@
 				@include adaptiv-value(margin-right, 35, 20, 1);
 			}
 		}
+		@media (max-width: #{$md2 + em}) {
+			&:not(:last-child) {
+				margin-bottom: 70px;
+			}
+		}
 	}
 	&__content {
 		@media (min-width: #{$md2 + em}) {
