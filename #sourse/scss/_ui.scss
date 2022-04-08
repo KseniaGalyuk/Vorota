@@ -866,6 +866,7 @@
 		}
 	}
 	&__button {
+		appearance: none;
 		width: 100%;
 	}
 }
@@ -1492,6 +1493,7 @@
 	&__tables {
 		overflow-x: auto;
 		overflow-y: hidden;
+		appearance: none;
 		margin: -10px 0;
 		padding: 10px 0;
 	}
