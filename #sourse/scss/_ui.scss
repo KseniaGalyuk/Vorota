@@ -19,6 +19,7 @@
 		opacity: 1;
 	}
 }
+// Скроллбар
 .simplebar-track.simplebar-horizontal {
 	background: #ededed;
 	height: 4px;
@@ -53,6 +54,7 @@
 	transition: all 0.3s ease 0s;
 	opacity: 1;
 }
+
 .btn {
 	display: flex;
 	justify-content: center;
@@ -153,6 +155,10 @@
 		}
 		&_icg_4 {
 			flex: 0 0 calc(16px * 2);
+		}
+		// Свайпер материалов на 4 стр
+		&_cm {
+			flex: 0 0 calc(16px * 5);
 		}
 	}
 }
@@ -413,12 +419,16 @@
 	&__container {
 	}
 	&__body {
-		padding: 20px 0;
+		padding: 15px 0;
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		font-weight: 400;
 		font-size: 16/16 * 1rem;
 		line-height: 1.3;
+		& > * {
+			padding: 2.5px 0;
+		}
 		a {
 			color: #797a7d;
 			transition: all 0.3s ease 0s;
@@ -1566,6 +1576,157 @@
 	}
 	&__gates {
 		width: 520px;
+	}
+}
+//====================================================================================================
+.kinds-two {
+	&__container {
+		@media (min-width: #{$md2 + em}) {
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__body {
+		@media (min-width: #{$md2 + em}) {
+			flex: 0 1 100%;
+			padding-right: 20px;
+		}
+		@media (max-width: #{$md2 + em}) {
+			@include adaptiv-value(margin-bottom, 50, 20, 1);
+		}
+	}
+	&__header {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+	&__title {
+	}
+	&__text {
+		font-weight: 400;
+		font-size: 16/16 * 1rem;
+		line-height: 1.3;
+		color: #7c7c80;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	&__list {
+		li {
+			display: flex;
+			align-items: flex-start;
+			font-weight: 400;
+			font-size: 16/16 * 1rem;
+			line-height: 1.3;
+			color: #7c7c80;
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+			span {
+				flex: 0 0 10px;
+				height: 2px;
+				margin: 9px 0;
+				margin-right: 8px;
+				background: $blueOriginal;
+			}
+		}
+	}
+	&__image {
+		@media (min-width: #{$md3 + em}) {
+			flex: 0 0 333px;
+			@include adaptiv-value(flex-basis, 400, 333, 1);
+			@include adaptiv-value(height, 280, 213, 1);
+			left: 10px;
+			bottom: 5px;
+			margin-right: 10px;
+		}
+		@media (max-width: #{$md2 + em}) {
+			max-width: 600px;
+			@include adaptiv-value(height, 380, 213, 1);
+			left: 5px;
+			margin: 0 auto;
+		}
+		position: relative;
+		border-radius: 15px;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			bottom: -10px;
+			left: -10px;
+			z-index: -1;
+			border: 3px solid #0b5ab9;
+			box-sizing: border-box;
+			filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.04)) drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.04))
+				drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.04));
+			border-radius: 15px;
+		}
+	}
+}
+//====================================================================================================
+.item-color {
+	padding: 15px 13px;
+	width: 100%;
+	&__body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	&__header {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	&__color {
+		width: 100px;
+		height: 100px;
+		border-radius: 50%;
+		&_1 {
+			background: #44332c;
+		}
+		&_2 {
+			background: #f6fbf5;
+		}
+		&_3 {
+			background: #44332c;
+		}
+		&_4 {
+			background: #a5a8a7;
+		}
+		&_5 {
+			background: #0f4336;
+		}
+		&_6 {
+			background: #701f28;
+		}
+		&_7 {
+			background: #373f42;
+		}
+		&_8 {
+			background: #ebdebc;
+		}
+	}
+	&__content {
+		text-align: center;
+		color: #27282e;
+		font-weight: 400;
+		font-size: 16/16 * 1rem;
+	}
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 6px;
+		}
+		line-height: 1;
+	}
+	&__text {
+		line-height: 1.2;
 	}
 }
 //</ОБЩИЕ БЛОКИ>====================================================================================================

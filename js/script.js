@@ -386,6 +386,35 @@ if (document.querySelector('.list-catalog-gutes__body_4')) {
 		}
 	});
 };
+// Свайпер материалов на 4 странице
+if (document.querySelector('.catalog-material__body')) {
+	new Swiper('.catalog-material__body', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_cm',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".catalog-material__controls .controls__arrow_next",
+			prevEl: ".catalog-material__controls .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			479.98: {
+				slidesPerView: 20,
+				spaceBetween: 0,
+			},
+		}
+	});
+};
 // Свайперы выполненых работ
 if (document.querySelector('.items-work_rollback')) {
 	new Swiper('.items-work_rollback', {

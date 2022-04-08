@@ -1,0 +1,144 @@
+.garage-gates {
+	&__navigation {
+		@include adaptiv-value(margin-bottom, 30, 10, 1);
+	}
+	&__registration {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__work {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__numbers {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__price {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+		.price__header {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+		.table__td {
+			&_1 {
+				width: 774px;
+			}
+			&_2 {
+				width: 266px;
+			}
+		}
+		.price__button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 12px 25px;
+			background: $blueOriginal;
+			border-radius: 5px;
+			font-size: 14/16 * 1rem;
+			line-height: 1;
+			color: $white;
+			transition: all 0.3s ease 0s;
+			box-sizing: border-box;
+			border: 1px solid $blueOriginal;
+			font-weight: 400;
+			&:not(._active) {
+				font-weight: 400;
+				background: $white;
+				color: $lightBlack;
+			}
+			margin-top: 10px;
+			margin-bottom: 0;
+			&::before {
+				display: none;
+			}
+			&:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+	&__kinds-two {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__callback {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__popular {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__contacts {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+}
+.registration {
+	&__header {
+		&:not(:last-child) {
+			@include adaptiv-value(margin-bottom, 35, 20, 1);
+		}
+	}
+	&__title {
+	}
+	&__container {
+	}
+	&__material {
+		&:not(:last-child) {
+			@include adaptiv-value(margin-bottom, 50, 40, 1);
+		}
+	}
+	&__colors {
+		margin: -15px -13px;
+		overflow-x: auto;
+	}
+	&__wrapper {
+		display: flex;
+		@media (min-width: #{$md3 + em}) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	&__item {
+		flex: 0 0 14.2857143%;
+		@media (max-width: #{$md2 + em}) {
+			flex: 0 0 16.5%;
+		}
+		@media (max-width: #{$md3 + em}) {
+			flex: 0 0 22%;
+		}
+		@media (max-width: #{$md4 + em}) {
+			flex: 0 0 40%;
+		}
+	}
+}
+.catalog-material {
+	&__body {
+		margin: -11px -9.5px;
+	}
+	&__wrapper {
+		@media (max-width: #{$md4 + em}) {
+			margin-bottom: 20px;
+		}
+		@media (min-width: #{$md4 + em}) {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+	}
+	&__item {
+		@media (min-width: #{$md4 + em}) {
+			flex: 0 0 20%;
+			@media (max-width: #{$md2 + em}) {
+				flex: 0 0 25%;
+			}
+			@media (max-width: #{$md3 + em}) {
+				flex: 0 0 33.3%;
+			}
+			@media (max-width: #{$md4 + em}) {
+				flex: 0 0 50%;
+			}
+		}
+	}
+	&__controls {
+		display: none;
+		@media (max-width: #{$md4 + em}) {
+			display: flex;
+		}
+	}
+}
