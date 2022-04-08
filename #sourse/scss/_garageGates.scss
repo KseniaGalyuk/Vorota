@@ -1,6 +1,10 @@
 .garage-gates {
+	background: #fafafa;
 	&__navigation {
 		@include adaptiv-value(margin-bottom, 30, 10, 1);
+	}
+	&__catalog {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
 	}
 	&__registration {
 		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
@@ -68,6 +72,235 @@
 		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
 	}
 }
+//====================================================================================================
+.catalog-garage {
+	&__container {
+	}
+	&__header {
+		&:not(:last-child) {
+			@include adaptiv-value(margin-bottom, 35, 15, 1);
+		}
+	}
+	&__title {
+	}
+	&__body {
+		display: flex;
+		align-items: start;
+	}
+	&__sidebar {
+		flex: 0 0 326px;
+		&:not(:last-child) {
+			margin-right: 35px;
+		}
+	}
+	&__content {
+		flex: 1 1 100%;
+	}
+	&__sort {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	&__products {
+		margin: -15px;
+	}
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		.item-product {
+			padding: 15px;
+		}
+	}
+	&__product {
+		flex: 0 0 50%;
+		// @media (max-width: #{$md2 + em}) {
+		// 	flex: 0 0 33.3%;
+		// }
+	}
+}
+.sidebar-filters {
+	background: #ffffff;
+	border: 1px solid #e3e3e3;
+	box-sizing: border-box;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	border-radius: 5px;
+	&__container {
+		padding: 25px 15px;
+	}
+	&__search {
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+		.search__input {
+			border: 1px solid $blueOriginal;
+			color: $lightBlack;
+			&::placeholder {
+				color: #7d7e82;
+				opacity: 1;
+			}
+		}
+	}
+	&__sort {
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+	}
+	&__footer {
+	}
+	&__button {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	&__reset {
+		text-align: center;
+	}
+	&__reset-btn {
+		font-weight: 400;
+		font-size: 16/16 * 1rem;
+		line-height: 19/16 * 100%;
+		color: $red;
+		position: relative;
+		padding-bottom: 2px;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 1px;
+			background-color: $red;
+			left: 0;
+			bottom: 0;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+.sort-sidebar {
+	&__header {
+		&:not(:last-child) {
+			margin-bottom: 17px;
+		}
+	}
+	&__title {
+		font-weight: 400;
+		font-size: 18/16 * 1rem;
+		line-height: 21/18 * 100%;
+		color: $lightBlack;
+	}
+	&__checkboxs {
+		& > *:not(:last-child) {
+			margin-bottom: 15px;
+		}
+	}
+	&__checkbox {
+		display: flex;
+		align-items: center;
+		position: relative;
+		min-height: 20px;
+	}
+	&__checkbox-input {
+		appearance: none;
+		position: absolute;
+		opacity: 0;
+		&:checked + .sort-sidebar__checkbox-label::after {
+			opacity: 1;
+		}
+	}
+	&__checkbox-label {
+		font-weight: 400;
+		font-size: 16/16 * 1rem;
+		line-height: 19/16 * 100%;
+		color: #747474;
+		padding-left: 28px;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $lightBlack;
+			}
+		}
+		cursor: pointer;
+		&::before {
+			content: "";
+			transition: all 0.3s ease 0s;
+			display: block;
+			width: 20px;
+			height: 20px;
+			background: #ffffff;
+			border: 1px solid $blueOriginal;
+			box-sizing: border-box;
+			border-radius: 3px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 3;
+		}
+		&::after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			background: url('data:image/svg+xml,\
+			\<svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">\
+\<path d="M0.999756 4.23077L3.99976 7L8.99976 1" stroke="%230B5AB9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>\
+\</svg>')
+				no-repeat;
+			background-position: center;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 4;
+			opacity: 0;
+			transition: all 0.2s linear 0s;
+			border-radius: 3px;
+		}
+	}
+}
+.sort-block {
+	display: flex;
+	align-items: center;
+	//justify-content: space-between;
+	&__title {
+		font-weight: 400;
+		font-size: 18/16 * 1rem;
+		line-height: 21/18 * 100%;
+		color: $lightBlack;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__brands {
+		background: #ffffff;
+		border: 1px solid #f0f0f0;
+		box-sizing: border-box;
+		border-radius: 15px;
+		min-height: 55px;
+		width: 100%;
+	}
+	&__wrapper {
+		padding: 10px 23px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		//justify-content: space-between;
+		& > *:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__brand {
+		flex: 0 1 33.3%;
+		//width: 149px;
+		height: 35px;
+	}
+}
+//====================================================================================================
 .registration {
 	&__header {
 		&:not(:last-child) {
@@ -107,6 +340,7 @@
 		}
 	}
 }
+//====================================================================================================
 .catalog-material {
 	&__body {
 		margin: -11px -9.5px;
