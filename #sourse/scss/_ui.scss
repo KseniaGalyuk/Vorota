@@ -288,6 +288,10 @@
 }
 //====================================================================================================
 .main {
+	@media (max-width: 899.98px) {
+		position: relative;
+		z-index: 1;
+	}
 	&__header {
 	}
 	&__bottom {
@@ -519,6 +523,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: start;
+		min-width: 200px;
 	}
 	&__label {
 		border-radius: 5px;
@@ -529,7 +534,9 @@
 		color: $white;
 		&_hit {
 			background: $blueOriginal;
-			width: 117px;
+		}
+		&_stock {
+			background: $red;
 		}
 		&:not(:last-child) {
 			margin-bottom: 5px;
@@ -554,14 +561,38 @@
 			font-size: 16/16 * 1rem;
 		}
 	}
+	&__prices {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			@include adaptiv-value(margin-bottom, 9, 13, 1);
+		}
+	}
+	&__old-price {
+		font-weight: 500;
+		font-size: 16/16 * 1rem;
+		line-height: 1;
+		color: #b6ceea;
+		position: relative;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1.5px;
+			left: 0;
+			top: 6px;
+			background-color: $blueOriginal;
+			transform: rotate(15deg);
+		}
+	}
 	&__price {
 		font-weight: 500;
 		font-size: 24/16 * 1rem;
 		line-height: 1;
 		color: $red;
-		&:not(:last-child) {
-			@include adaptiv-value(margin-bottom, 9, 13, 1);
-		}
 		@media (max-width: #{$md3 + em}) {
 			font-size: 20/16 * 1rem;
 		}

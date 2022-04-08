@@ -73,6 +73,40 @@
 	}
 }
 //====================================================================================================
+.sort-block {
+	display: flex;
+	align-items: center;
+	&__title {
+		flex: 0 0 auto;
+		font-weight: 400;
+		font-size: 18/16 * 1rem;
+		line-height: 21/18 * 100%;
+		color: $lightBlack;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__brands {
+		background: #ffffff;
+		border: 1px solid #f0f0f0;
+		box-sizing: border-box;
+		border-radius: 15px;
+		min-height: 55px;
+		width: 100%;
+	}
+	&__wrapper {
+		padding: 10px 23px;
+		display: flex;
+		align-items: center;
+		& > *:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__brand {
+		flex: 0 1 33%;
+		height: 35px;
+	}
+}
 .catalog-garage {
 	&__container {
 	}
@@ -85,24 +119,42 @@
 	}
 	&__body {
 		display: flex;
-		align-items: start;
+		@media (min-width: #{$md2 + em}) {
+			align-items: start;
+		}
+		@media (max-width: #{$md2 + em}) {
+			flex-direction: column;
+		}
 	}
 	&__sidebar {
-		flex: 0 0 326px;
-		&:not(:last-child) {
-			margin-right: 35px;
+		@media (min-width: #{$md2 + em}) {
+			flex: 0 0 326px;
+			@include adaptiv-value(flex-basis, 326, 200, 1);
+			&:not(:last-child) {
+				@include adaptiv-value(margin-right, 35, 20, 1);
+			}
 		}
 	}
 	&__content {
-		flex: 1 1 100%;
+		@media (min-width: #{$md2 + em}) {
+			flex: 1 1 100%;
+		}
 	}
 	&__sort {
-		&:not(:last-child) {
-			margin-bottom: 10px;
+		@media (min-width: #{$md2 + em}) {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		@media (max-width: #{$md2 + em}) {
+			display: none;
 		}
 	}
 	&__products {
 		margin: -15px;
+		@media (max-width: #{$md3 + em}) {
+			margin: -10px;
+		}
 	}
 	&__wrapper {
 		display: flex;
@@ -110,13 +162,29 @@
 		flex-wrap: wrap;
 		.item-product {
 			padding: 15px;
+			@media (max-width: #{$md3 + em}) {
+				padding: 10px;
+			}
 		}
+		@include adaptiv-value(margin-bottom, 23, 20, 1);
 	}
 	&__product {
 		flex: 0 0 50%;
-		// @media (max-width: #{$md2 + em}) {
-		// 	flex: 0 0 33.3%;
-		// }
+		@media (max-width: #{$md3 + em}) {
+			flex: 0 1 100%;
+			margin: 0 auto;
+		}
+	}
+	&__button {
+		text-align: center;
+		padding: 15px;
+	}
+	&__btn {
+		cursor: pointer;
+		@media (min-width: #{$md3 + em}) {
+			display: inline-flex;
+			padding: 12px 35px;
+		}
 	}
 }
 .sidebar-filters {
@@ -140,10 +208,30 @@
 				opacity: 1;
 			}
 		}
+		@media (min-width: #{$md2 + em}) {
+			.search__btn {
+				opacity: 0.8;
+			}
+		}
+		@media (max-width: #{$md2 + em}) {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+			.search__input {
+				&::placeholder {
+					color: $lightBlack;
+				}
+			}
+		}
 	}
 	&__sort {
 		&:not(:last-child) {
 			margin-bottom: 25px;
+		}
+		@media (max-width: #{$md2 + em}) {
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
 		}
 	}
 	&__footer {
@@ -188,6 +276,11 @@
 		&:not(:last-child) {
 			margin-bottom: 17px;
 		}
+		@media (max-width: #{$md2 + em}) {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
 	}
 	&__title {
 		font-weight: 400;
@@ -198,6 +291,17 @@
 	&__checkboxs {
 		& > *:not(:last-child) {
 			margin-bottom: 15px;
+		}
+		@media (max-width: #{$md2 + em}) {
+			display: none;
+		}
+	}
+	&__select {
+		@media (min-width: #{$md2 + em}) {
+			display: none;
+		}
+		select {
+			border: 1px solid $blueOriginal;
 		}
 	}
 	&__checkbox {
@@ -261,43 +365,6 @@
 			transition: all 0.2s linear 0s;
 			border-radius: 3px;
 		}
-	}
-}
-.sort-block {
-	display: flex;
-	align-items: center;
-	//justify-content: space-between;
-	&__title {
-		font-weight: 400;
-		font-size: 18/16 * 1rem;
-		line-height: 21/18 * 100%;
-		color: $lightBlack;
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
-	}
-	&__brands {
-		background: #ffffff;
-		border: 1px solid #f0f0f0;
-		box-sizing: border-box;
-		border-radius: 15px;
-		min-height: 55px;
-		width: 100%;
-	}
-	&__wrapper {
-		padding: 10px 23px;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		//justify-content: space-between;
-		& > *:not(:last-child) {
-			margin-right: 10px;
-		}
-	}
-	&__brand {
-		flex: 0 1 33.3%;
-		//width: 149px;
-		height: 35px;
 	}
 }
 //====================================================================================================
