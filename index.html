@@ -4,13 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- Подключени слайдера swiper -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
 	<link rel="stylesheet" href="css/style.css">
 	<!-- <link rel="shortcut icon" href="img/favicon/"> -->
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Автоматические ворота в Москве</title>
 </head>
@@ -381,16 +378,19 @@
 							<div class="menu-header__body">
 								<ul class="menu-header__list">
 									<li class="menu-header__item">
-										<a href="" class="menu-header__link">О компании</a>
+										<a href="aboutUs.html" class="menu-header__link">О компании</a>
 									</li>
 									<li class="menu-header__item">
-										<a href="" class="menu-header__link">Акции</a>
+										<a href="sales.html" class="menu-header__link">Акции</a>
 									</li>
 									<li class="menu-header__item">
-										<a href="" class="menu-header__link">Выполненые работы</a>
+										<a href="works.html" class=" menu-header__link">Выполненые работы</a>
 									</li>
 									<li class="menu-header__item">
-										<a href="" class="menu-header__link">Контакты</a>
+										<a href="price.html" class="menu-header__link">Цены</a>
+									</li>
+									<li class="menu-header__item">
+										<a href="contacts.html" class="menu-header__link">Контакты</a>
 									</li>
 								</ul>
 								<div class="menu-header__order">
@@ -622,7 +622,7 @@
 							<article class="popular__slide item-product swiper-slide">
 								<div class="item-product__wrapper">
 									<div class="item-product__body">
-										<a href="" class="item-product__header">
+										<a href="cartGate.html" class="item-product__header">
 											<div class="item-product__labels">
 												<div class="item-product__label item-product__label_hit">
 													<p>Хит продаж</p>
@@ -636,7 +636,7 @@
 											<div class="item-product__prices">
 												<div class="item-product__price">89 800 р.</div>
 											</div>
-											<a href class="item-product__button btn btn_white">Заказать</a>
+											<a href="cartGate.html" class="item-product__button btn btn_white">Заказать</a>
 										</div>
 									</div>
 								</div>
@@ -895,11 +895,11 @@
 						</div>
 						<div class="price__select select">
 							<select name="control">
-								<option value="rollback" data-work="rollback">Откатные</option>
-								<option value="swing" data-work="swing">Распашные</option>
-								<option value="sectional" data-work="sectional">Секционные</option>
-								<option value="rolled" data-work="swing">Рулонные</option>
-								<option value="other" data-work="sectional">Другие услуги</option>
+								<option value="rollback">Откатные</option>
+								<option value="swing">Распашные</option>
+								<option value="sectional">Секционные</option>
+								<option value="rolled">Рулонные</option>
+								<option value="other">Другие услуги</option>
 							</select>
 						</div>
 						<div data-simplebar class="price__tables">
@@ -2443,64 +2443,10 @@
 			</div>
 		</footer>
 	</div>
-	<!-- попап -->
-	<!-- <div id="popup" class="popup">
-		<div class="popup__body">
-			<div class="popup__content">
-				<a href="#" class="popup__close"></a>
-				<div class="popup__text">
-					Заявка принята, мы свяжемся с вами в ближайшее время!
-				</div>
-			</div>
-		</div>
-	</div> -->
-	<!-- слайдер swiper, Эти классы добавляются к основным классам болока -->
-	<!-- <div class="swiper">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide">
-				Слайд 1
-			</div>
-			<div class="swiper-slide">
-				Слайд 2
-			</div>
-		</div>
-		<div class="swiper-pagination"></div>
-	</div> -->
-	<!-- Подключение скрипта слайдера swiper -->
 	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 	<script src="js/script.js"></script>
-	<!-- Динамический адаптив, нужен для того, чтобы перемещать элемент куда угодно в коде с помощью data-da=".main-slider__body,991.98,2" (куда(блок, в котором будет находиться элемент) , когда, какой(отсчет с нуля)) -->
 	<script src="js/dynamic-adapt.js"></script>
 </body>
 
 </html>
-<!-- 
-\\анимация
-_anim-no-hide - этот класс для того, чтобы не запускать анимацию повторно и не убирать класс _active
-_anim-items - этот класс добавляется к анимируемым объектам
-Ну и класс с написанной в css анимацией
-
-\\Прокрутка
-scroll-to-top - класс добавляется к кнопке, нажав на которую, прокрутит в начало
-<block>_scroll - класс добавляется к кнопке, нажав на которую, прокрутит к <block> (вместо <block> подставить название блока).Лучше не делать кнопку ссылкой
-
-\\рейтинг звезд
-star-rating - класс добавляется каждой звезде
-
-\\поп-апы
-_popup-link - этот класс добавляется ко всем кнопкам, на которых открывается поп-ап
-lock-padding - Этот класс добавляется к фиксированным объектам, например к шапке
-popup__close - этот класс добавляется для крестика, по которому поп-ап закрывается
-
-\\спойлеры фрилансера
-Для родителя слойлеров пишем атрибут data-spollers
-Для заголовков слойлеров пишем атрибут data-spoller
-Если нужно включать\выключать работу спойлеров на разных размерах экранов
-пишем параметры ширины и типа брейкпоинта.
-Например: 
-data-spollers="992,max" - спойлеры будут работать только на экранах меньше или равно 992px
-data-spollers="768,min" - спойлеры будут работать только на экранах больше или равно 768px
-
-Если нужно что бы в блоке открывался болько один слойлер добавляем атрибут data-one-spoller к родителю
--->

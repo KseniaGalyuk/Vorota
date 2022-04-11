@@ -157,6 +157,55 @@ if (document.querySelector('.discount__slider')) {
 		}
 	});
 };
+if (document.querySelector('.payment__items')) {
+	new Swiper('.payment__items', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_pay',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		//Переключение с помощью клавиатуры
+		keyboard: {
+			//включить/выключить
+			enabled: true,
+			//Только когда слайдер в пределах вьюпорта вкдючить/выключить
+			onlyInViewport: true,
+			// Управление клавишами pageUp/pageDown включить/выключить
+			pageUpDown: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 30,
+				// Arrows
+		navigation: {
+			nextEl: ".payment__controls .controls__arrow_next",
+			prevEl: ".payment__controls .controls__arrow_prev",
+		},
+		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
+		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			500: {
+				slidesPerView: 1.4,
+				spaceBetween: 30,
+			},
+			767.98: {
+				slidesPerView: 20,
+				spaceBetween: 0,
+			}
+		}
+	});
+};
 // Свайпер каталогов на 1 странице
 if (document.querySelector('.catalog-page__body')) {
 	new Swiper('.catalog-page__body', {
@@ -818,6 +867,106 @@ if (document.querySelector('.item-work__slider-h9')) {
 		},
 	});
 };
+//Свайпер выполненных работ на выполненных работах
+if (document.querySelector('.items-work_rollback-works')) {
+	new Swiper('.items-work_rollback-works', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_works-1',
+			type: 'bullets',
+			clickable: true,
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+			pageUpDown: true,
+		},
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".items-work__controls_works-1 .controls__arrow_next",
+			prevEl: ".items-work__controls_works-1 .controls__arrow_prev",
+		},
+		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
+		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 50,
+			},
+			889.98: {
+				slidesPerView: 20,
+				spaceBetween: 0,
+			},
+		}
+	});
+};
+if (document.querySelector('.items-work_swing-works')) {
+	new Swiper('.items-work_swing-works', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_works-2',
+			type: 'bullets',
+			clickable: true,
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+			pageUpDown: true,
+		},
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".items-work__controls_works-2 .controls__arrow_next",
+			prevEl: ".items-work__controls_works-2 .controls__arrow_prev",
+		},
+		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
+		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 50,
+			},
+			889.98: {
+				slidesPerView: 20,
+				spaceBetween: 0,
+			},
+		}
+	});
+};
+if (document.querySelector('.items-work_sectional-works')) {
+	new Swiper('.items-work_sectional-works', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_works-3',
+			type: 'bullets',
+			clickable: true,
+		},
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+			pageUpDown: true,
+		},
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".items-work__controls_works-3 .controls__arrow_next",
+			prevEl: ".items-work__controls_works-3 .controls__arrow_prev",
+		},
+		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
+		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 50,
+			},
+			889.98: {
+				slidesPerView: 20,
+				spaceBetween: 0,
+			},
+		}
+	});
+};
 // Таблицы
 const priceControl = document.querySelector('.price__control');
 const priceButtons = document.querySelectorAll('.price__button');
@@ -1002,6 +1151,39 @@ if (workControl != null) {
 		});
 	})
 }
+// Табы описания товара
+const descriptionControl = document.querySelector('.description__control');
+const descriptionButtons = document.querySelectorAll('.description__button');
+const descriptionItems = document.querySelectorAll('.description__item');
+const descriptionSelect = document.querySelector('.description__select select');
+if (descriptionControl != null) {
+	descriptionControl.addEventListener('click', function (e) {
+		if (e.target.classList.contains('description__button') ) {
+			descriptionButtons.forEach(button => {
+				button.classList.remove('_active');
+			});
+			e.target.classList.add('_active');
+			const dataElem = e.target.dataset.description;
+			descriptionItems.forEach(block => {
+				block.classList.remove('_active');
+				const dataBlock = block.dataset.description;
+				if (dataElem==dataBlock) {
+					block.classList.add('_active');
+				}
+			});
+		}
+	})
+	descriptionSelect.addEventListener('change', function (e) {
+		descriptionItems.forEach(block => {
+			block.classList.remove('_active');
+			const dataBlock = block.dataset.description;
+			if (descriptionSelect.value==dataBlock) {
+				block.classList.add('_active');
+			}
+		});
+	})
+}
+
 // Меню бургер, открытие подменю каталога
 const iconMenu = document.querySelector('.icon-menu');
 const menuHeaderBody = document.querySelector('.menu-header__body');
@@ -1204,50 +1386,6 @@ if (spollersArray.length > 0) {
 		}
 	}
 }
-//Прокрутка к началу строницы
-const scrollToTop = document.querySelectorAll('.scroll-to-top');
-if (scrollToTop.length > 0) {
-	for (let index = 0; index < questionsX.length; index++) {
-		scrollToTop[index].addEventListener('click', scrollTop());
-	}
-}
-//прокрутка к блоку
-const questions = document.querySelector('.questions');
-const questionsX = document.querySelectorAll('.questions_scroll');
-if (questionsX.length > 0) {
-	for (let index = 0; index < questionsX.length; index++) {
-		questionsX[index].addEventListener('click', () => scrollToBlock(questions));
-	}
-};
-//анимация при скролле
-const animItems = document.querySelectorAll('._anim-items');//этот класс добавляется к анимируемым объектам
-if (animItems.length > 0) {
-	window.addEventListener('scroll', animOnScroll);
-	function animOnScroll() {
-		for (let index = 0; index < animItems.length; index++) {
-			const animItem = animItems[index];
-			const animItemHeight = animItem.offsetHeight; //высота объекта
-			const animItemoffset = offset(animItem).top; //позиция объекта относительно верха
-			const animStart = 4; //регулирует момент старта анимации, в данном случае при скролле 1/4 от высоты объекта
-
-			let animItemPoint = window.innerHeight - animItemHeight / animStart;
-			if (animItemHeight > window.innerHeight) {
-				animItemPoint = window.innerHeight - window.innerHeight / animStart;
-			}
-
-			if ((scrollY > animItemoffset - animItemPoint) && scrollY < (animItemoffset + animItemHeight)) {
-				animItem.classList.add('_active');
-			} else {
-				if (!animItem.classList.contains('_anim-no-hide')) { //этот класс для того, чтобы не запускать анимацию повторно и не убирать класс _active
-					animItem.classList.remove('_active');
-				}
-			}
-		}
-	}
-	setTimeout(() => { //Если есть анимации на верхнем блоке, она покакжется без скролла через 0.3 сек
-		animOnScroll();
-	}, 300);
-}
 //Popups
 //у попапа должен быть id с его названием, а у кнопки, по которой он открывается href='#{название поп-апа}'
 let popupLink = document.querySelectorAll('._popup-link'); //этот класс добавляется ко всем кнопкам, на которых открывается поп-ап
@@ -1302,42 +1440,6 @@ function _removeClasses(el, class_name) {
 		el[i].classList.remove(class_name);
 	}
 }
-// Функции для перемещения лейблов у тегов форм
-function addAnEvent(elem) {
-	elem.firstElementChild.addEventListener('focus', function () {
-		formAddClass(elem)
-	});
-	elem.firstElementChild.addEventListener('blur', function () {
-		formRemoveClass(elem)
-	});
-}
-function formAddClass(elem) {
-	elem.classList.add('_active');
-}
-function formRemoveClass(elem) {
-	const elemChildValue = elem.firstElementChild.value;
-	if (elemChildValue == '') {
-		elem.classList.remove('_active');
-	}
-}
-//Прокрутка к началу строници
-function scrollTop(e) {
-	e.preventDefault();
-	window.scrollTo({
-		top: 0,
-		left: 0,
-		behavior: "smooth",
-	});
-};
-function scrollToBlock(block) { //в скобки передаем блок, до которого надо докрутить
-	let getTop = block.getBoundingClientRect().top;
-	let getTopDocument = getTop + window.scrollY;
-	window.scrollTo({
-		top: getTopDocument,
-		left: 0,
-		behavior: "smooth",
-	});
-};
 //эта функция точно узнает местоположение объекта.Можно получить значение сверху и слева
 function offset(el) { //в скобках объект, чье местоположение нужно
 	const rect = el.getBoundingClientRect(),

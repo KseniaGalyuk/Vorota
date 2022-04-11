@@ -1,0 +1,24 @@
+.sales {
+	&__navigation {
+		margin-bottom: 10px;
+	}
+	&__main {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+		.bottom-main__container {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+	}
+	&__popular {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__callback {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__step {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__contacts {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+}

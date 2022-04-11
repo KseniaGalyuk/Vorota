@@ -133,6 +133,10 @@
 		&_pp {
 			flex: 0 0 calc(16px * 6);
 		}
+		// Свайпер payment-items
+		&_pay {
+			flex: 0 0 calc(16px * 4);
+		}
 		// Свайперы выполненных работ
 		&_iw-1 {
 			flex: 0 0 calc(16px * 3);
@@ -159,6 +163,16 @@
 		// Свайпер материалов на 4 стр
 		&_cm {
 			flex: 0 0 calc(16px * 5);
+		}
+		// Свайпер выполненных работ на выполненных работах
+		&_works-1 {
+			flex: 0 0 calc(16px * 3);
+		}
+		&_works-2 {
+			flex: 0 0 calc(16px * 3);
+		}
+		&_works-3 {
+			flex: 0 0 calc(16px * 3);
 		}
 	}
 }
@@ -416,6 +430,13 @@
 			width: 100%;
 			z-index: -1;
 		}
+	}
+	&__text-block {
+		font-weight: 400;
+		font-size: 16/16 * 1rem;
+		line-height: 1.3;
+		color: $lightBlack;
+		opacity: 0.6;
 	}
 }
 //====================================================================================================
@@ -880,7 +901,7 @@
 	&__container {
 		border-radius: 15px;
 		overflow: hidden;
-		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 	}
 	&__header {
 	}
@@ -1116,7 +1137,6 @@
 		box-sizing: border-box;
 		box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
 		border-radius: 15px;
-		//overflow: hidden;
 		padding: 25px 30px 30px 30px;
 		display: flex;
 		@media (max-width: 889.98px) {
@@ -1491,7 +1511,6 @@
 	}
 	&__tables {
 		overflow-x: auto;
-		//overflow-y: hidden;
 		appearance: none;
 		margin: -10px 0;
 		padding: 10px 0;
@@ -1508,7 +1527,6 @@
 	border-collapse: collapse;
 	align-items: center;
 	border-radius: 15px;
-	// border: solid 4px $red;
 	tr {
 		&._hover {
 			& > *:not(th) {
@@ -1611,9 +1629,15 @@
 	&__gates {
 		width: 520px;
 	}
+	&__cart-1 {
+		width: 834px;
+	}
+	&__cart-2 {
+		width: 206px;
+	}
 }
 //====================================================================================================
-.kinds-two {
+.info-block {
 	&__container {
 		@media (min-width: #{$md2 + em}) {
 			display: flex;
@@ -1670,12 +1694,12 @@
 			}
 		}
 	}
-
 	&__image {
 		position: relative;
 		z-index: 2;
 		@media (min-width: #{$md2 + em}) {
-			flex: 0 0 333px;
+			flex-shrink: 0;
+			flex-grow: 0;
 			@include adaptiv-value(flex-basis, 400, 333, 1);
 			margin-right: 10px;
 		}
@@ -1687,7 +1711,7 @@
 	&__img {
 		width: 100%;
 		@media (min-width: #{$md2 + em}) {
-			@include adaptiv-value(height, 280, 213, 1);
+			@include adaptiv-value(height, 250, 213, 1);
 			left: 10px;
 			bottom: 5px;
 		}
@@ -1771,6 +1795,121 @@
 	}
 	&__text {
 		line-height: 1.2;
+	}
+}
+//====================================================================================================
+.questions {
+	&__container {
+	}
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			@include adaptiv-value(margin-bottom, 27, 19.7, 1);
+		}
+	}
+	&__title {
+		margin-right: 20px;
+	}
+	&__button {
+		padding-left: 42px;
+		padding-right: 42px;
+	}
+	&__body {
+	}
+	&__list {
+		max-height: 340px;
+		overflow-y: auto;
+		overflow-x: hidden;
+		position: relative;
+		margin: -15px -10px;
+		padding: 15px 10px;
+		@media (max-width: #{$md3 + em}) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+		@media (min-width: #{$md3 + em}) {
+			margin-right: 16px;
+		}
+	}
+}
+.item-question {
+	padding: 15.5px;
+	@include adaptiv-value(padding-left, 20, 14.8, 1);
+	@include adaptiv-value(padding-right, 20, 14.8, 1);
+	border-radius: 10px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+	cursor: pointer;
+	&__header {
+		display: flex;
+		&._active {
+			.item-question__icon {
+				transform: rotate(180deg);
+			}
+		}
+	}
+	&__icon {
+		flex: 0 0 25px;
+		height: 25px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background: $blueOriginal;
+		transition: all 0.3s ease 0s;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__title {
+		font-weight: 400;
+		font-size: 16/16 * 1rem;
+		line-height: 1.4;
+		color: $lightBlack;
+	}
+	&__text {
+		padding-top: 20px;
+		@include adaptiv-value(padding-left, 20, 10, 1);
+		@include adaptiv-value(padding-right, 20, 10, 1);
+		font-weight: 400;
+		font-size: 14/16 * 1rem;
+		line-height: 1.3;
+		color: #333333;
+		p {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+//====================================================================================================
+.colors {
+	overflow-x: auto;
+	&__wrapper {
+		display: flex;
+		@media (min-width: #{$md3 + em}) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	&__item {
+		flex: 0 0 14.2857143%;
+		@media (max-width: #{$md2 + em}) {
+			flex: 0 0 16.5%;
+		}
+		@media (max-width: #{$md3 + em}) {
+			flex: 0 0 22%;
+		}
+		@media (max-width: #{$md4 + em}) {
+			flex: 0 0 40%;
+		}
 	}
 }
 //</ОБЩИЕ БЛОКИ>====================================================================================================

@@ -1,0 +1,8 @@
+.contacts-page {
+	&__navigation {
+		@include adaptiv-value(margin-bottom, 30, 10, 1);
+	}
+	&__contacts {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+}

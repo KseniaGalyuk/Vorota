@@ -1,0 +1,42 @@
+.works {
+	background: #fafafa;
+	&__navigation {
+		@include adaptiv-value(margin-bottom, 30, 10, 1);
+	}
+	&__callback {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__work {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+		.items-work__wrapper {
+			& > :not(:last-child) {
+				margin-bottom: 25px;
+			}
+			@media (min-width: 889.98px) {
+				display: flex;
+				flex-wrap: wrap;
+				& > * {
+					flex: 0 0 100%;
+				}
+				& > :nth-child(2) {
+					.item-work__header {
+						padding-left: 15px;
+						padding-right: 0;
+						order: 2;
+					}
+					.item-work__content {
+						padding-left: 0;
+						padding-right: 15px;
+						order: 1;
+					}
+				}
+			}
+		}
+	}
+	&__questions {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+	&__contacts {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
+}
