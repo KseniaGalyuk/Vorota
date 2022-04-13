@@ -1,4 +1,5 @@
 .sales {
+	background: #fafafa;
 	&__navigation {
 		margin-bottom: 10px;
 	}
@@ -9,7 +10,7 @@
 			padding-bottom: 0;
 		}
 	}
-	&__popular {
+	&__discount {
 		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
 	}
 	&__callback {

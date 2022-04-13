@@ -397,8 +397,12 @@
 				padding-bottom: 20px;
 				padding-top: 20px;
 			}
+			a {
+				display: inline-block;
+				width: 100%;
+			}
 			flex-direction: column;
-			padding-top: 170px;
+			@include adaptiv-value(padding-top, 180, 140, 1);
 		}
 	}
 	&__item {

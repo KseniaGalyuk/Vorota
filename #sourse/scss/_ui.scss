@@ -19,6 +19,9 @@
 		opacity: 1;
 	}
 }
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	width: auto;
+}
 // Скроллбар
 .simplebar-track.simplebar-horizontal {
 	background: #ededed;
@@ -113,67 +116,7 @@
 	&__pagination {
 		text-align: center;
 		margin: 0 16px;
-		// Свайпер advantagas
-		&_ad {
-			flex: 0 0 calc(16px * 3); //3 - кол-во слайдов
-		}
-		// Свайпер catalog-page
-		&_cp {
-			flex: 0 0 calc(16px * 10);
-		}
-		// Свайпер catalog-hub
-		&_cc {
-			flex: 0 0 calc(16px * 10);
-		}
-		// Свайпер discount
-		&_dp {
-			flex: 0 0 calc(16px * 6);
-		}
-		// Свайпер popular
-		&_pp {
-			flex: 0 0 calc(16px * 6);
-		}
-		// Свайпер payment-items
-		&_pay {
-			flex: 0 0 calc(16px * 4);
-		}
-		// Свайперы выполненных работ
-		&_iw-1 {
-			flex: 0 0 calc(16px * 3);
-		}
-		&_iw-2 {
-			flex: 0 0 calc(16px * 3);
-		}
-		&_iw-3 {
-			flex: 0 0 calc(16px * 3);
-		}
-		// Свайперы каталога на 3 стр
-		&_icg_1 {
-			flex: 0 0 calc(16px * 6);
-		}
-		&_icg_2 {
-			flex: 0 0 calc(16px * 2);
-		}
-		&_icg_3 {
-			flex: 0 0 calc(16px * 3);
-		}
-		&_icg_4 {
-			flex: 0 0 calc(16px * 2);
-		}
-		// Свайпер материалов на 4 стр
-		&_cm {
-			flex: 0 0 calc(16px * 5);
-		}
-		// Свайпер выполненных работ на выполненных работах
-		&_works-1 {
-			flex: 0 0 calc(16px * 3);
-		}
-		&_works-2 {
-			flex: 0 0 calc(16px * 3);
-		}
-		&_works-3 {
-			flex: 0 0 calc(16px * 3);
-		}
+		display: inline-flex;
 	}
 }
 .titleH2 {
@@ -1692,6 +1635,9 @@
 				margin-right: 8px;
 				background: $blueOriginal;
 			}
+		}
+		&:not(:last-child) {
+			margin-bottom: 10px;
 		}
 	}
 	&__image {

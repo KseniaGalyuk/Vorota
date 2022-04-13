@@ -1,4 +1,5 @@
 .price-page {
+	background: #fafafa;
 	&__navigation {
 		@include adaptiv-value(margin-bottom, 30, 10, 1);
 	}
