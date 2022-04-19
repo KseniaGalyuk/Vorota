@@ -298,6 +298,52 @@ if (document.querySelector('.catalog-hub__body')) {
 		}
 	});
 };
+// Свайпер каталогов на услугах
+if (document.querySelector('.catalog-services__body')) {
+	new Swiper('.catalog-services__body', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination_cs',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		keyboard: {
+			//включить/выключить
+			enabled: true,
+			//Только когда слайдер в пределах вьюпорта вкдючить/выключить
+			onlyInViewport: true,
+			// Управление клавишами pageUp/pageDown включить/выключить
+			pageUpDown: true,
+		},
+		watchOverflow: true,
+		navigation: {
+			nextEl: ".catalog-services__controls .controls__arrow_next",
+			prevEl: ".catalog-services__controls .controls__arrow_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 30,
+			},
+			450: {
+				slidesPerView: 1.3,
+				spaceBetween: 0,
+			},
+			600: {
+				slidesPerView: 1.8,
+			},
+			700: {
+				slidesPerView: 2.4,
+			},
+			850: {
+				slidesPerView: 20,
+			},
+		}
+	});
+};
 // Свайперы каталогов на 3 странице
 if (document.querySelector('.list-catalog-gutes__body_1')) {
 	new Swiper('.list-catalog-gutes__body_1', {

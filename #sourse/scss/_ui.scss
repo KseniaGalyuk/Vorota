@@ -22,6 +22,11 @@
 .swiper-pagination-bullets.swiper-pagination-horizontal {
 	width: auto;
 }
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
 // Скроллбар
 .simplebar-track.simplebar-horizontal {
 	background: #ededed;
@@ -117,6 +122,8 @@
 		text-align: center;
 		margin: 0 16px;
 		display: inline-flex;
+		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 .titleH2 {
