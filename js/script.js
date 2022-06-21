@@ -3,7 +3,26 @@
 const body = document.querySelector('body');
 let unlock = true;
 // Функция возвращает устройство на котором открыт сайт   isMobile.any()    вернет true, если сайт открыт на устройстве с тачскрином
-var isMobile = { Android: function () { return navigator.userAgent.match(/Android/i); }, BlackBerry: function () { return navigator.userAgent.match(/BlackBerry/i); }, iOS: function () { return navigator.userAgent.match(/iPhone|iPad|iPod/i); }, Opera: function () { return navigator.userAgent.match(/Opera Mini/i); }, Windows: function () { return navigator.userAgent.match(/IEMobile/i); }, any: function () { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); } };
+var isMobile = {
+	Android: function () {
+		return navigator.userAgent.match(/Android/i);
+	},
+	BlackBerry: function () {
+		return navigator.userAgent.match(/BlackBerry/i);
+	},
+	iOS: function () {
+		return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	},
+	Opera: function () {
+		return navigator.userAgent.match(/Opera Mini/i);
+	},
+	Windows: function () {
+		return navigator.userAgent.match(/IEMobile/i);
+	},
+	any: function () {
+		return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	}
+};
 
 //*</ Общие переменные>==========================================================================================
 // swiper
@@ -34,7 +53,7 @@ if (document.querySelector('.advantagas__slider')) {
 		watchOverflow: true,
 		// Отступ между слайдами
 		spaceBetween: 30,
-				// Arrows
+		// Arrows
 		navigation: {
 			nextEl: ".advantagas__slider .controls__arrow_next",
 			prevEl: ".advantagas__slider .controls__arrow_prev",
@@ -82,8 +101,8 @@ if (document.querySelector('.popular__slider')) {
 		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
 		watchOverflow: true,
 		// Отступ между слайдами
-		 spaceBetween: 31,
-				// Arrows
+		spaceBetween: 31,
+		// Arrows
 		navigation: {
 			nextEl: ".popular__controls .controls__arrow_next",
 			prevEl: ".popular__controls .controls__arrow_prev",
@@ -132,8 +151,8 @@ if (document.querySelector('.discount__slider')) {
 		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
 		watchOverflow: true,
 		// Отступ между слайдами
-		 spaceBetween: 31,
-				// Arrows
+		spaceBetween: 31,
+		// Arrows
 		navigation: {
 			nextEl: ".discount__controls .controls__arrow_next",
 			prevEl: ".discount__controls .controls__arrow_prev",
@@ -183,7 +202,7 @@ if (document.querySelector('.payment__items')) {
 		watchOverflow: true,
 		// Отступ между слайдами
 		spaceBetween: 30,
-				// Arrows
+		// Arrows
 		navigation: {
 			nextEl: ".payment__controls .controls__arrow_next",
 			prevEl: ".payment__controls .controls__arrow_prev",
@@ -536,29 +555,12 @@ if (document.querySelector('.items-work_rollback')) {
 		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
 		watchOverflow: true,
 		// Отступ между слайдами
-		 spaceBetween: 50,
-				// Arrows
+		spaceBetween: 50,
+		// Arrows
 		navigation: {
 			nextEl: ".items-work__controls-1 .controls__arrow_next",
 			prevEl: ".items-work__controls-1 .controls__arrow_prev",
 		},
-		 //loop: true,
-		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
-		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
-		// breakpoints: {
-		// 	320: {
-		// 		slidesPerView: 1,
-		// 	},
-		// 	600: {
-		// 		slidesPerView: 1.6,
-		// 	},
-		// 	850: {
-		// 		slidesPerView: 2.4,
-		// 	},
-		// 	1100: {
-		// 		slidesPerView: 3,
-		// 	},
-		// }
 	});
 };
 if (document.querySelector('.items-work_swing')) {
@@ -586,29 +588,12 @@ if (document.querySelector('.items-work_swing')) {
 		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
 		watchOverflow: true,
 		// Отступ между слайдами
-		 spaceBetween: 50,
-				// Arrows
-				navigation: {
-					nextEl: ".items-work__controls-2 .controls__arrow_next",
-					prevEl: ".items-work__controls-2 .controls__arrow_prev",
-				},
-		 //loop: true,
-		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
-		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
-		// breakpoints: {
-		// 	320: {
-		// 		slidesPerView: 1,
-		// 	},
-		// 	600: {
-		// 		slidesPerView: 1.6,
-		// 	},
-		// 	850: {
-		// 		slidesPerView: 2.4,
-		// 	},
-		// 	1100: {
-		// 		slidesPerView: 3,
-		// 	},
-		// }
+		spaceBetween: 50,
+		// Arrows
+		navigation: {
+			nextEl: ".items-work__controls-2 .controls__arrow_next",
+			prevEl: ".items-work__controls-2 .controls__arrow_prev",
+		},
 	});
 };
 if (document.querySelector('.items-work_sectional')) {
@@ -636,29 +621,12 @@ if (document.querySelector('.items-work_sectional')) {
 		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
 		watchOverflow: true,
 		// Отступ между слайдами
-		 spaceBetween: 50,
-				// Arrows
+		spaceBetween: 50,
+		// Arrows
 		navigation: {
 			nextEl: ".items-work__controls-3 .controls__arrow_next",
 			prevEl: ".items-work__controls-3 .controls__arrow_prev",
 		},
-		// loop: true,
-		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
-		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
-		// breakpoints: {
-		// 	320: {
-		// 		slidesPerView: 1,
-		// 	},
-		// 	600: {
-		// 		slidesPerView: 1.6,
-		// 	},
-		// 	850: {
-		// 		slidesPerView: 2.4,
-		// 	},
-		// 	1100: {
-		// 		slidesPerView: 3,
-		// 	},
-		// }
 	});
 };
 if (document.querySelector('.item-work__slider-h1')) {
@@ -685,7 +653,7 @@ if (document.querySelector('.item-work__slider-h1')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -713,7 +681,7 @@ if (document.querySelector('.item-work__slider-h2')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -741,7 +709,7 @@ if (document.querySelector('.item-work__slider-h3')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -769,7 +737,7 @@ if (document.querySelector('.item-work__slider-h4')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -797,7 +765,7 @@ if (document.querySelector('.item-work__slider-h5')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -825,7 +793,7 @@ if (document.querySelector('.item-work__slider-h6')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -853,7 +821,7 @@ if (document.querySelector('.item-work__slider-h7')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -881,7 +849,7 @@ if (document.querySelector('.item-work__slider-h8')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -909,7 +877,7 @@ if (document.querySelector('.item-work__slider-h9')) {
 		},
 		effect: 'fade',
 		fadeEffect: {
-			crossFade:true,
+			crossFade: true,
 		},
 	});
 };
@@ -947,39 +915,37 @@ if (document.querySelector('.items-work_rollback-works')) {
 		}
 	});
 };
-if (document.querySelector('.items-work_swing-works')) {
-	new Swiper('.items-work_swing-works', {
-		//Навигация
-		pagination: {
-			el: '.controls__pagination_works-2',
-			type: 'bullets',
-			clickable: true,
+new Swiper('.items-work_swing-works', {
+	//Навигация
+	pagination: {
+		el: '.controls__pagination_works-2',
+		type: 'bullets',
+		clickable: true,
+	},
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true,
+		pageUpDown: true,
+	},
+	// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+	watchOverflow: true,
+	navigation: {
+		nextEl: ".items-work__controls_works-2 .controls__arrow_next",
+		prevEl: ".items-work__controls_works-2 .controls__arrow_prev",
+	},
+	// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
+	// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 50,
 		},
-		keyboard: {
-			enabled: true,
-			onlyInViewport: true,
-			pageUpDown: true,
+		889.98: {
+			slidesPerView: 20,
+			spaceBetween: 0,
 		},
-		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
-		watchOverflow: true,
-		navigation: {
-			nextEl: ".items-work__controls_works-2 .controls__arrow_next",
-			prevEl: ".items-work__controls_works-2 .controls__arrow_prev",
-		},
-		// Брейк поинты, работают по принципу мобайл ферст, срабатывают н аширине больще указанной
-		// Этим способом нельзя координально измеить логику слайдера, например поменять горизонтальный скролл на вертикальный
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-				spaceBetween: 50,
-			},
-			889.98: {
-				slidesPerView: 20,
-				spaceBetween: 0,
-			},
-		}
-	});
-};
+	}
+});
 if (document.querySelector('.items-work_sectional-works')) {
 	new Swiper('.items-work_sectional-works', {
 		//Навигация
@@ -1022,7 +988,7 @@ const trs = document.querySelectorAll('tr');
 const tds = document.querySelectorAll('td');
 if (priceControl != null) {
 	priceControl.addEventListener('click', function (e) {
-		if (e.target.classList.contains("price__button") ) {
+		if (e.target.classList.contains("price__button")) {
 			priceButtons.forEach(button => {
 				button.classList.remove('_active');
 			});
@@ -1031,7 +997,7 @@ if (priceControl != null) {
 			priceTables.forEach(block => {
 				block.classList.remove('_active');
 				const dataBlock = block.dataset.price;
-				if (dataElem==dataBlock) {
+				if (dataElem == dataBlock) {
 					block.classList.add('_active');
 				}
 			});
@@ -1041,7 +1007,7 @@ if (priceControl != null) {
 		priceTables.forEach(block => {
 			block.classList.remove('_active');
 			const dataBlock = block.dataset.price;
-			if (priceSelect.value==dataBlock) {
+			if (priceSelect.value == dataBlock) {
 				block.classList.add('_active');
 			}
 		});
@@ -1053,14 +1019,14 @@ priceTables.forEach(priceTable => {
 			e.target.classList.add('_hover');
 			if (e.target.dataset.tr) {
 				tds.forEach(td => {
-					if (td.dataset.td==e.target.dataset.tr) {
+					if (td.dataset.td == e.target.dataset.tr) {
 						td.classList.add('_hover');
 					}
-					
+
 				});
-			} else if(e.target.dataset.td) {
+			} else if (e.target.dataset.td) {
 				tds.forEach(td => {
-					if (td.dataset.tr==e.target.dataset.td) {
+					if (td.dataset.tr == e.target.dataset.td) {
 						td.classList.add('_hover');
 					}
 				});
@@ -1075,7 +1041,7 @@ priceTables.forEach(priceTable => {
 						const t = table[index];
 
 						for (let y = t.children.length; y >= 0; y--) {
-							if ( t.children.length-y == i) {
+							if (t.children.length - y == i) {
 								t.children[y].classList.add('_hover');
 							}
 						}
@@ -1089,14 +1055,14 @@ priceTables.forEach(priceTable => {
 			e.target.classList.remove('_hover');
 			if (e.target.dataset.tr) {
 				tds.forEach(td => {
-					if (td.dataset.td==e.target.dataset.tr) {
+					if (td.dataset.td == e.target.dataset.tr) {
 						td.classList.remove('_hover');
 					}
-					
+
 				});
-			} else if(e.target.dataset.td){
+			} else if (e.target.dataset.td) {
 				tds.forEach(td => {
-					if (td.dataset.tr==e.target.dataset.td) {
+					if (td.dataset.tr == e.target.dataset.td) {
 						td.classList.remove('_hover');
 					}
 				});
@@ -1111,8 +1077,8 @@ priceTables.forEach(priceTable => {
 					for (let index = 0; index < table.length; index++) {
 						const t = table[index];
 						for (let y = t.children.length; y >= 0; y--) {
-							
-							if ( t.children.length-y == i) {
+
+							if (t.children.length - y == i) {
 								t.children[y].classList.remove('_hover');
 							}
 						}
@@ -1133,14 +1099,14 @@ priceTables.forEach(priceTable => {
 			e.target.classList.add('_active');
 			if (e.target.dataset.tr) {
 				tds.forEach(td => {
-					if (td.dataset.td==e.target.dataset.tr) {
+					if (td.dataset.td == e.target.dataset.tr) {
 						td.classList.add('_active');
 					}
-					
+
 				});
-			} else if(e.target.dataset.td){
+			} else if (e.target.dataset.td) {
 				tds.forEach(td => {
-					if (td.dataset.tr==e.target.dataset.td) {
+					if (td.dataset.tr == e.target.dataset.td) {
 						td.classList.add('_active');
 					}
 				});
@@ -1155,7 +1121,7 @@ priceTables.forEach(priceTable => {
 						const t = table[index];
 
 						for (let y = t.children.length; y >= 0; y--) {
-							if ( t.children.length-y == i) {
+							if (t.children.length - y == i) {
 								t.children[y].classList.add('_active');
 							}
 						}
@@ -1172,7 +1138,7 @@ const workItems = document.querySelectorAll('.items-work');
 const workSelect = document.querySelector('.work__select select');
 if (workControl != null) {
 	workControl.addEventListener('click', function (e) {
-		if (e.target.classList.contains('work__button') ) {
+		if (e.target.classList.contains('work__button')) {
 			workButtons.forEach(button => {
 				button.classList.remove('_active');
 			});
@@ -1181,7 +1147,7 @@ if (workControl != null) {
 			workItems.forEach(block => {
 				block.classList.remove('_active');
 				const dataBlock = block.dataset.work;
-				if (dataElem==dataBlock) {
+				if (dataElem == dataBlock) {
 					block.classList.add('_active');
 				}
 			});
@@ -1191,7 +1157,7 @@ if (workControl != null) {
 		workItems.forEach(block => {
 			block.classList.remove('_active');
 			const dataBlock = block.dataset.work;
-			if (workSelect.value==dataBlock) {
+			if (workSelect.value == dataBlock) {
 				block.classList.add('_active');
 			}
 		});
@@ -1204,7 +1170,7 @@ const descriptionItems = document.querySelectorAll('.description__item');
 const descriptionSelect = document.querySelector('.description__select select');
 if (descriptionControl != null) {
 	descriptionControl.addEventListener('click', function (e) {
-		if (e.target.classList.contains('description__button') ) {
+		if (e.target.classList.contains('description__button')) {
 			descriptionButtons.forEach(button => {
 				button.classList.remove('_active');
 			});
@@ -1213,7 +1179,7 @@ if (descriptionControl != null) {
 			descriptionItems.forEach(block => {
 				block.classList.remove('_active');
 				const dataBlock = block.dataset.description;
-				if (dataElem==dataBlock) {
+				if (dataElem == dataBlock) {
 					block.classList.add('_active');
 				}
 			});
@@ -1223,7 +1189,7 @@ if (descriptionControl != null) {
 		descriptionItems.forEach(block => {
 			block.classList.remove('_active');
 			const dataBlock = block.dataset.description;
-			if (descriptionSelect.value==dataBlock) {
+			if (descriptionSelect.value == dataBlock) {
 				block.classList.add('_active');
 			}
 		});
@@ -1233,29 +1199,94 @@ if (descriptionControl != null) {
 // Меню бургер, открытие подменю каталога
 const iconMenu = document.querySelector('.icon-menu');
 const menuHeaderBody = document.querySelector('.menu-header__body');
-const catalogBtn=document.querySelector('.catalog-header__button')
+const catalogBtn = document.querySelector('.catalog-header__button');
+const headerLists = document.querySelectorAll('.catalog-header__list');
+const sublistCatalogs = document.querySelectorAll('.sublist-catalog');
+const catalogClose = document.querySelector('.catalog-header__list-close');
 document.addEventListener('click', function (e) {
+	if (catalogBtn != null && (window.innerWidth <= 1092)) {
+		if (e.target.closest('.catalog-header__button')) {
+			catalogBtn.classList.add('_active');
+			catalogBtn.querySelector('.catalog-header__list-wrapper > .catalog-header__list').classList.add('_active');
+			bodyLock();
+		}
+		if (e.target.closest(".catalog-header__list-close")) {
+			catalogBtn.classList.remove('_active');
+			headerLists.forEach(elem => {
+				elem.classList.remove('_active');
+			});
+			sublistCatalogs.forEach(elem => {
+				elem.classList.remove('_active');
+			});
+			bodyUnLock();
+		}
+		if (e.target.closest(".catalog-header__item-icon")) {
+			const catalogSublist = e.target.closest('.catalog-header__item').querySelector('.catalog-header__list')
+			if (catalogSublist) {
+				headerLists.forEach(elem => {
+					elem.classList.remove('_active');
+				});
+				catalogSublist.classList.add('_active');
+				catalogClose.classList.add('_anim');
+				setTimeout(() => {
+					catalogClose.classList.remove('_anim');
+				}, 500);
+			} else {
+				const sublistCatalog = e.target.closest('.catalog-header__item').querySelector('.sublist-catalog');
+				if (sublistCatalog) {
+					headerLists.forEach(elem => {
+						elem.classList.remove('_active');
+					});
+					sublistCatalogs.forEach(elem => {
+						elem.classList.remove('_active');
+					});
+					sublistCatalog.classList.add('_active');
+					catalogClose.classList.add('_anim');
+					setTimeout(() => {
+						catalogClose.classList.remove('_anim');
+					}, 500);
+				}
+			}
+		}
+		if (e.target.closest(".catalog-header__sublist-title-icon")) {
+			const catalogSublistPrev = e.target.closest('.catalog-header__item').closest('.catalog-header__list')
+			headerLists.forEach(elem => {
+				elem.classList.remove('_active');
+			});
+			sublistCatalogs.forEach(elem => {
+				elem.classList.remove('_active');
+			});
+			catalogSublistPrev.classList.add('_active');
+			catalogClose.classList.add('_anim');
+			setTimeout(() => {
+				catalogClose.classList.remove('_anim');
+			}, 500);
+		}
+	}
 	if (iconMenu != null) {
 		if (e.target.closest('.icon-menu')) {
 			iconMenu.classList.toggle('_active');
 			menuHeaderBody.classList.toggle('_active');
 			bodyLock();
-			if (!menuHeaderBody.classList.contains('_active')) {
+			if (!menuHeaderBody.classList.contains('_active') && !catalogBtn.classList.contains('_active')) {
 				bodyUnLock();
 			}
 		}
-		if (!e.target.closest('.icon-menu') && !e.target.closest('._popup-link') && !e.target.closest('.popup__content') && !e.target.closest('.catalog-header__button')) {
+		if (!e.target.closest('.icon-menu') && !e.target.closest('._popup-link') && !e.target.closest('.popup__content')) {
 			iconMenu.classList.remove('_active');
 			menuHeaderBody.classList.remove('_active');
-			bodyUnLock();
-			catalogBtn.classList.remove('_active');
+			if (!catalogBtn.classList.contains('_active')) {
+				bodyUnLock();
+			}
 		}
 	};
-		if (e.target.closest('.catalog-header__button') || e.target.classList.contains('catalog-header__button')) {
-			catalogBtn.classList.toggle('_active');
-		}
 });
-
+if ((window.innerWidth <= 1092)) {
+	const hfj = document.querySelectorAll('.sublist-catalog')
+	hfj.forEach(elem => {
+		elem.removeAttribute('data-simplebar');
+	});
+}
 // Спойлеры
 let _slideUp = (target, duration = 500) => {
 	if (!target.classList.contains('_slide')) {
@@ -1408,6 +1439,7 @@ if (spollersArray.length > 0) {
 			});
 		}
 	}
+
 	function setSpollerAction(e) {
 		const el = e.target;
 		if (el.hasAttribute('data-spoller') || el.closest('[data-spoller]')) {
@@ -1424,6 +1456,7 @@ if (spollersArray.length > 0) {
 			e.preventDefault();
 		}
 	}
+
 	function hideSpollersBody(spollersBlock) {
 		const spoller_activeTitle = spollersBlock.querySelector('[data-spoller]._active');
 		if (spoller_activeTitle) {
@@ -1447,7 +1480,7 @@ if (popupLink.length > 0) {
 		})
 	}
 }
-let popupCloseIcon = document.querySelectorAll('.popup__close');//этот класс добавляется для крестика, по которому поп-ап закрывается
+let popupCloseIcon = document.querySelectorAll('.popup__close'); //этот класс добавляется для крестика, по которому поп-ап закрывается
 if (popupCloseIcon.length > 0) {
 	for (let index = 0; index < popupCloseIcon.length; index++) {
 		const el = popupCloseIcon[index];
@@ -1491,7 +1524,10 @@ function offset(el) { //в скобках объект, чье местопол�
 	const rect = el.getBoundingClientRect(),
 		scrollLeft = window.scrollX || document.documentElement.scrollLeft,
 		scrollTop = window.scrollY || document.documentElement.scrollTop;
-	return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+	return {
+		top: rect.top + scrollTop,
+		left: rect.left + scrollLeft
+	}
 }
 //Открывает поп-ап
 function popupOpen(curentPopup) { //В скобках попап, который надо открыть (найти его можно по айди)
