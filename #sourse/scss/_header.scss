@@ -1,15 +1,4 @@
 //====================================================================================================
-@keyframes iconClose {
-	0% {
-		right: 15px;
-	}
-	50% {
-		right: -100%;
-	}
-	100% {
-		right: 15px;
-	}
-}
 .header {
 	&__wrapper {
 	}
@@ -199,14 +188,14 @@
 		@media (max-width: #{$md1 + px}) {
 			transition: all 0.3s ease 0s;
 			margin: 0;
-			position: fixed;
+			position: absolute;
 			display: block;
 			width: 1.375rem;
 			height: 30px;
 			cursor: pointer;
 			z-index: 20;
-			@include adaptiv-value(top, 142, 115, 1);
-			right: -100%;
+			top: 0;
+			right: 0;
 			margin-top: 15px;
 			span {
 				transition: all 0.3s ease 0s;
@@ -226,27 +215,37 @@
 					bottom: calc(50% - 0.0715rem);
 				}
 			}
-			&._anim {
-				animation-duration: 0.3s;
-				animation-name: iconClose;
-			}
 		}
 	}
-	&__item-icon {
+	&__icon-spoller {
 		display: none;
 		@media (max-width: #{$md1 + px}) {
-			display: block;
-			position: absolute;
-			height: 100%;
-			top: 0;
-			right: 0;
 			display: flex;
-			align-items: center;
 			justify-content: flex-end;
-			width: 50px;
-			svg path {
-				stroke: $blueOriginal;
-				opacity: 1;
+			align-items: center;
+			position: absolute;
+			pointer-events: none;
+			top: 14px;
+			right: 3px;
+			height: 30px;
+			width: 30px;
+			svg {
+				transition: all 0.3s ease 0s;
+				transform: rotate(90deg);
+				path {
+					transition: all 0.3s ease 0s;
+					opacity: 0.5;
+				}
+			}
+			&._active {
+				pointer-events: auto;
+				svg {
+					transform: rotate(-90deg);
+					path {
+						stroke: $blueOriginal;
+						opacity: 1;
+					}
+				}
 			}
 		}
 	}
@@ -309,14 +308,15 @@
 						opacity: 1;
 						visibility: visible;
 						top: calc(100% - 15px);
+						pointer-events: auto;
 					}
 				}
 			}
 		}
 		@media (max-width: #{$md1 + px}) {
 			&._active {
-				.catalog-header__list-close {
-					right: 15px;
+				.catalog-header__body {
+					right: 0;
 				}
 			}
 		}
@@ -331,6 +331,7 @@
 	}
 	&__body {
 		@media (min-width: #{$md1 + px}) {
+			pointer-events: none;
 			transition: all 0.3s ease 0s;
 			opacity: 0;
 			visibility: hidden;
@@ -343,15 +344,18 @@
 			padding-top: 15px;
 			cursor: default;
 		}
-	}
-	&__list-wrapper {
-		@media (min-width: #{$md1 + px}) {
-			height: 490px;
-			border: 1px solid #e1e1e1;
-			box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
-			border-radius: 0 0 15px 15px;
-			padding: 28px 0 55px 0;
+		@media (max-width: #{$md1 + px}) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			top: 0;
+			right: -100%;
+			transition: right 0.3s ease 0s;
+			padding: 142px 15px 30px 15px;
+			z-index: 10;
 			background: $white;
+			@include adaptiv-value(padding-top, 142, 115, 1);
 		}
 	}
 	&__list {
@@ -381,39 +385,23 @@
 			}
 		}
 		@media (max-width: #{$md1 + px}) {
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			overflow: auto;
-			top: 0;
-			right: -100%;
-			transition: right 0.3s ease 0s;
-			padding: 142px 15px 30px 15px;
-			z-index: 10;
-			background: $white;
-			@include adaptiv-value(padding-top, 142, 115, 1);
-			&._active {
-				right: 0;
-			}
 		}
 	}
 	&__item {
 		@media (min-width: #{$md1 + px}) {
-			@media (any-hover: hover) {
-				&:hover {
-					& > .catalog-header__sublist {
-						opacity: 1;
-						visibility: visible;
-						left: 100%;
+			&._active {
+				& > .catalog-header__sublist {
+					opacity: 1;
+					visibility: visible;
+					left: 100%;
+				}
+				& > .catalog-header__link {
+					background: $blueOriginal;
+					border-radius: 5px;
+					.catalog-header__icon path {
+						fill: $white;
 					}
-					& > .catalog-header__link {
-						background: $blueOriginal;
-						border-radius: 5px;
-						.catalog-header__icon path {
-							fill: $white;
-						}
-						color: $white;
-					}
+					color: $white;
 				}
 			}
 		}
@@ -448,6 +436,8 @@
 		}
 		@media (max-width: #{$md1 + px}) {
 			padding: 20px 30px 20px 0;
+			font-weight: 500;
+			font-size: calc(18 / 16 * 1rem);
 		}
 	}
 	&__icon {
@@ -478,6 +468,30 @@
 			top: 0px;
 			z-index: 10;
 		}
+		@media (max-width: #{$md1 + px}) {
+			background: #f9f9f9;
+			border-radius: 5px;
+			padding: 0 15px;
+		}
+	}
+	&__list-wrapper {
+		@media (min-width: #{$md1 + px}) {
+			height: 490px;
+			border: 1px solid #e1e1e1;
+			box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+			border-radius: 0 0 15px 15px;
+			padding: 28px 0 55px 0;
+			background: $white;
+		}
+		@media (max-width: #{$md1 + px}) {
+			.catalog-header__sublist .catalog-header__link {
+				font-size: calc(16 / 16 * 1rem);
+			}
+			.catalog-header__sublist .catalog-header__sublist .catalog-header__link {
+				font-size: calc(14 / 16 * 1rem);
+				font-weight: 500;
+			}
+		}
 	}
 }
 .sublist-catalog {
@@ -487,22 +501,6 @@
 		padding-left: 50px;
 		overflow-y: auto;
 		overflow-x: hidden;
-	}
-	@media (max-width: #{$md1 + px}) {
-		position: fixed;
-		width: 100%;
-		height: 100%;
-		overflow: auto;
-		top: 0;
-		right: -100%;
-		transition: right 0.3s ease 0s;
-		padding: 142px 15px 30px 15px;
-		z-index: 10;
-		background: $white;
-		@include adaptiv-value(padding-top, 142, 115, 1);
-		&._active {
-			right: 0;
-		}
 	}
 	// .sublist-catalog__content
 	&__content {
@@ -554,8 +552,17 @@
 				transition: all 0.3s ease 0s;
 				transform: rotate(90deg);
 				path {
-					stroke: $blueOriginal;
-					opacity: 1;
+					transition: all 0.3s ease 0s;
+					opacity: 0.5;
+				}
+			}
+			&._active {
+				svg {
+					transform: rotate(-90deg);
+					path {
+						stroke: $blueOriginal;
+						opacity: 1;
+					}
 				}
 			}
 		}
@@ -571,7 +578,7 @@
 			}
 		}
 		@media (max-width: #{$md1 + px}) {
-			font-weight: 500;
+			font-weight: 400;
 			position: relative;
 			display: flex;
 			align-items: center;
@@ -582,6 +589,7 @@
 					}
 				}
 			}
+			font-size: calc(14 / 16 * 1rem);
 		}
 	}
 	// .sublist-catalog__item-list
@@ -592,7 +600,9 @@
 			}
 		}
 		@media (max-width: #{$md1 + px}) {
-			padding-top: 20px;
+			&:not(:first-child) {
+				padding-top: 20px;
+			}
 		}
 	}
 	// .sublist-catalog__item-link
@@ -612,6 +622,8 @@
 			&:not(:last-child) {
 				margin-bottom: 15px;
 			}
+			font-weight: 400;
+			font-size: calc(14 / 16 * 1rem);
 		}
 	}
 }

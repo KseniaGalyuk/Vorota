@@ -1200,67 +1200,15 @@ if (descriptionControl != null) {
 const iconMenu = document.querySelector('.icon-menu');
 const menuHeaderBody = document.querySelector('.menu-header__body');
 const catalogBtn = document.querySelector('.catalog-header__button');
-const headerLists = document.querySelectorAll('.catalog-header__list');
-const sublistCatalogs = document.querySelectorAll('.sublist-catalog');
-const catalogClose = document.querySelector('.catalog-header__list-close');
 document.addEventListener('click', function (e) {
 	if (catalogBtn != null && (window.innerWidth <= 1092)) {
 		if (e.target.closest('.catalog-header__button')) {
 			catalogBtn.classList.add('_active');
-			catalogBtn.querySelector('.catalog-header__list-wrapper > .catalog-header__list').classList.add('_active');
 			bodyLock();
 		}
 		if (e.target.closest(".catalog-header__list-close")) {
 			catalogBtn.classList.remove('_active');
-			headerLists.forEach(elem => {
-				elem.classList.remove('_active');
-			});
-			sublistCatalogs.forEach(elem => {
-				elem.classList.remove('_active');
-			});
 			bodyUnLock();
-		}
-		if (e.target.closest(".catalog-header__item-icon")) {
-			const catalogSublist = e.target.closest('.catalog-header__item').querySelector('.catalog-header__list')
-			if (catalogSublist) {
-				headerLists.forEach(elem => {
-					elem.classList.remove('_active');
-				});
-				catalogSublist.classList.add('_active');
-				catalogClose.classList.add('_anim');
-				setTimeout(() => {
-					catalogClose.classList.remove('_anim');
-				}, 500);
-			} else {
-				const sublistCatalog = e.target.closest('.catalog-header__item').querySelector('.sublist-catalog');
-				if (sublistCatalog) {
-					headerLists.forEach(elem => {
-						elem.classList.remove('_active');
-					});
-					sublistCatalogs.forEach(elem => {
-						elem.classList.remove('_active');
-					});
-					sublistCatalog.classList.add('_active');
-					catalogClose.classList.add('_anim');
-					setTimeout(() => {
-						catalogClose.classList.remove('_anim');
-					}, 500);
-				}
-			}
-		}
-		if (e.target.closest(".catalog-header__sublist-title-icon")) {
-			const catalogSublistPrev = e.target.closest('.catalog-header__item').closest('.catalog-header__list')
-			headerLists.forEach(elem => {
-				elem.classList.remove('_active');
-			});
-			sublistCatalogs.forEach(elem => {
-				elem.classList.remove('_active');
-			});
-			catalogSublistPrev.classList.add('_active');
-			catalogClose.classList.add('_anim');
-			setTimeout(() => {
-				catalogClose.classList.remove('_anim');
-			}, 500);
 		}
 	}
 	if (iconMenu != null) {
@@ -1281,11 +1229,107 @@ document.addEventListener('click', function (e) {
 		}
 	};
 });
+// каталог
+const catalogClose = document.querySelector('.catalog-header__list-close');
 if ((window.innerWidth <= 1092)) {
-	const hfj = document.querySelectorAll('.sublist-catalog')
-	hfj.forEach(elem => {
+	// Закрываем все спойлеры
+	$(".catalog-header__link").next().next().slideUp();
+	// открываем спойлер, если надо
+	const spollerOpen = $(".catalog-header__link_open")
+	if (spollerOpen) {
+		spollerOpen.next().next().slideDown();
+		spollerOpen.addClass('_link')
+		spollerOpen.next().addClass('_active');
+	}
+	// спойлер по клику на ссылку
+	$(".catalog-header__link").on('click', function (e) {
+		const $this = $(this);
+		if ($this.next().next().length > 0) {
+			if (!$this.hasClass('_link')) {
+				$this.next().addClass('_active');
+				e.preventDefault();
+				$this.next().next().slideDown();
+				$this.addClass('_link');
+			}
+		}
+	})
+	// спойлер по клику на стрелку
+	$(".catalog-header__icon-spoller").on('click', function (e) {
+		const $this = $(this);
+		if ($this.next().length > 0) {
+			if (!$this.hasClass('_active')) {
+				$this.addClass('_active');
+				$this.next().slideDown();
+				$this.prev().addClass('_link');
+			} else {
+				$this.removeClass('_active');
+				$this.next().slideUp();
+				$this.prev().removeClass('_link');
+			}
+		}
+	})
+	// Спойлеры последней вложенности 
+	const sublistItemTitle = $(".sublist-catalog__item-title")
+	sublistItemTitle.next().slideUp();
+	sublistItemTitle.on('click', function (e) {
+		const $this = $(this);
+		$this.find('.sublist-catalog__item-icon').toggleClass('_active');
+		$this.next().slideToggle();
+	})
+	// удаление кастомного скролла на мобилках
+	const elemSimplebar = document.querySelectorAll('.sublist-catalog')
+	elemSimplebar.forEach(elem => {
 		elem.removeAttribute('data-simplebar');
 	});
+} else {
+	// наведение на десктопах
+	const activeItem = $('.catalog-header__item._active');
+	const catalogItems = $('.catalog-header__item');
+	const catalogItemsOne = $('.catalog-header__item_one');
+	const catalogItemsTwo = $('.catalog-header__item_two');
+	const catalogItemsThree = $('.catalog-header__item_three');
+	catalogItemsOne.on('mouseenter', function () {
+		catalogItems.removeClass('_active');
+		const $this = $(this);
+		$this.addClass('_active');
+		const childItem = $this.find('.catalog-header__item');
+		if (childItem[1]) {
+			childItem[1].classList.add('_active');
+		}
+		if (childItem[0]) {
+			childItem[0].classList.add('_active');
+			childItem[0].nextElementSibling.classList.remove('_active');
+		}
+	})
+	catalogItemsTwo.on('mouseenter', function () {
+		catalogItemsTwo.removeClass('_active');
+		catalogItemsThree.removeClass('_active');
+		const $this = $(this);
+		$this.addClass('_active');
+		const childItem = $this.find('.catalog-header__item');
+		if (childItem[0]) {
+			childItem[0].classList.add('_active');
+		}
+	})
+	catalogItemsThree.on('mouseenter', function () {
+		catalogItemsThree.removeClass('_active');
+		const $this = $(this);
+		$this.addClass('_active');
+	})
+	// catalogItemsOne.on('mouseleave', function () {
+	// 	catalogItems.removeClass('_active');
+	// })
+	// catalogItemsTwo.on('mouseleave', function () {
+	// 	catalogItemsTwo.removeClass('_active');
+	// 	catalogItemsThree.removeClass('_active');
+	// })
+	// catalogItemsThree.on('mouseleave', function () {
+	// 	catalogItemsThree.removeClass('_active');
+	// })
+	$('.catalog-header__body').on('mouseleave', function () {
+		catalogItems.removeClass('_active');
+		activeItem.addClass('_active');
+	})
 }
 // Спойлеры
 let _slideUp = (target, duration = 500) => {
