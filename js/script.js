@@ -26,6 +26,26 @@ var isMobile = {
 
 //*</ Общие переменные>==========================================================================================
 // swiper
+// свайпер фильтров на выполненых работах
+if (document.querySelector('.filter-work__item')) {
+	new Swiper('.filter-work__item', {
+		watchOverflow: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 1.2,
+			},
+			450: {
+				slidesPerView: 1.7,
+			},
+			600: {
+				slidesPerView: 2.3,
+			},
+			991.98: {
+				slidesPerView: 4,
+			}
+		}
+	});
+};
 // Общие свайперы
 if (document.querySelector('.advantagas__slider')) {
 	new Swiper('.advantagas__slider', {
@@ -1331,6 +1351,30 @@ if ((window.innerWidth <= 1092)) {
 		activeItem.addClass('_active');
 	})
 }
+// Раскрыть карту на выполненных работах
+$('.work-new__more').next().hide();
+$('.work-new__more').on('click', function () {
+	const $this = $(this);
+	$this.toggleClass('_active');
+	if ($this.hasClass('_active')) {
+		$this.next().show();
+		$this.find("p").text('Скрыть карту')
+	} else {
+		$this.next().hide();
+		$this.find("p").text('Раскрыть карту')
+	}
+})
+// Раскрыть доп фильтры на выполненных работах
+$('.filter-work__more').next().hide();
+$('.filter-work__more').on('click', function () {
+	const $this = $(this);
+	$this.toggleClass('_active');
+	if ($this.hasClass('_active')) {
+		$this.next().slideDown();
+	} else {
+		$this.next().slideUp();
+	}
+})
 // Спойлеры
 let _slideUp = (target, duration = 500) => {
 	if (!target.classList.contains('_slide')) {
