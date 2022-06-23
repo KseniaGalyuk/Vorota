@@ -901,6 +901,67 @@ if (document.querySelector('.item-work__slider-h9')) {
 		},
 	});
 };
+if (document.querySelector('.item-work-new__slider')) {
+	new Swiper('.item-work-new__slider', {
+		//Навигация
+		pagination: {
+			el: '.controls__pagination-item-work-new',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		// Количество слайдов для показа, можно указывать не целые числа, можно 'auto'-колво слайдеров выводится автоматически, в зависимости от контента или заданной ширины
+		slidesPerView: 1,
+		// Если слайдов меньше чем нужно, слайдер полностью перестанет работать, пока будет нужного количества
+		watchOverflow: true,
+		// Отступ между слайдами
+		spaceBetween: 10,
+		autoplay: {
+			delay: 4000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,
+		},
+		effect: 'fade',
+		fadeEffect: {
+			crossFade: true,
+		},
+	});
+};
+if (document.querySelector('.slider-work-portfolio')) {
+	new Swiper('.slider-work-portfolio', {
+		keyboard: {
+			enabled: true,
+			onlyInViewport: true,
+			pageUpDown: true,
+		},
+		pagination: {
+			el: '.controls__pagination-work-portfolio',
+			// Буллеты
+			//тип по умолчанию
+			type: 'bullets',
+			//можно ли на него нажимать
+			clickable: true,
+		},
+		watchOverflow: true,
+		loop: true,
+		spaceBetween: 5,
+		thumbs: {
+			swiper: {
+				el: '.slider-work-portfolio-mini',
+				slidesPerView: 3,
+				spaceBetween: 15,
+			}
+		},
+		breakpoints: {
+			574.98: {
+				slidesPerView: 1,
+				centeredSlides: false,
+			},
+		}
+	});
+};
 //Свайпер выполненных работ на выполненных работах
 if (document.querySelector('.items-work_rollback-works')) {
 	new Swiper('.items-work_rollback-works', {
@@ -1352,8 +1413,8 @@ if ((window.innerWidth <= 1092)) {
 	})
 }
 // Раскрыть карту на выполненных работах
-$('.work-new__more').next().hide();
-$('.work-new__more').on('click', function () {
+$('.work-new__show-map').next().hide();
+$('.work-new__show-map').on('click', function () {
 	const $this = $(this);
 	$this.toggleClass('_active');
 	if ($this.hasClass('_active')) {
@@ -1363,6 +1424,14 @@ $('.work-new__more').on('click', function () {
 		$this.next().hide();
 		$this.find("p").text('Раскрыть карту')
 	}
+})
+// Раскрыть доп характеристики на выполненных работах детальная
+$('.work-portfolio__characteristics-more').prev().hide();
+$('.work-portfolio__characteristics-more').on('click', function () {
+	const $this = $(this);
+	$this.prev().slideDown(function () {
+		$this.hide();
+	});
 })
 // Раскрыть доп фильтры на выполненных работах
 $('.filter-work__more').next().hide();
