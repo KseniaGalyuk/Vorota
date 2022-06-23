@@ -93,20 +93,29 @@
 		box-sizing: border-box;
 		border-radius: 15px;
 		width: 100%;
-		overflow: auto;
+		padding: 10px 20px;
 	}
 	&__wrapper {
-		padding: 5px 18px;
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
+		margin: -5px;
 	}
 	&__brand {
-		flex-grow: 0;
-		flex-shrink: 0;
-		@include adaptiv-value(flex-basis, 148, -58, 1);
-		padding-top: 7.3%;
-		margin: 5px 5px;
+		padding: 5px;
+		flex: 1 1 auto;
+	}
+	&__brand-wrapper {
+		position: relative;
+		padding-bottom: calc(35 / 130 * 100%);
+		img {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			object-fit: contain;
+			border-radius: 5px;
+		}
 	}
 }
 .catalog-garage {
@@ -130,15 +139,14 @@
 	}
 	&__sidebar {
 		@media (min-width: #{$md2 + em}) {
-			flex: 0 0 326px;
-			@include adaptiv-value(flex-basis, 326, 200, 1);
+			flex: 0 0 211px;
 			&:not(:last-child) {
-				@include adaptiv-value(margin-right, 35, 20, 1);
+				margin-right: 20px;
 			}
 		}
 		@media (max-width: #{$md2 + em}) {
 			&:not(:last-child) {
-				margin-bottom: 70px;
+				margin-bottom: 40px;
 			}
 		}
 	}
@@ -158,17 +166,16 @@
 		}
 	}
 	&__products {
-		margin: -15px;
+		margin: -10px;
 		@media (max-width: #{$md3 + em}) {
 			margin: -10px;
 		}
 	}
 	&__wrapper {
 		display: flex;
-		align-items: center;
 		flex-wrap: wrap;
 		.item-product {
-			padding: 15px;
+			padding: 10px;
 			@media (max-width: #{$md3 + em}) {
 				padding: 10px;
 			}
@@ -176,8 +183,11 @@
 		@include adaptiv-value(margin-bottom, 23, 20, 1);
 	}
 	&__product {
-		flex: 0 0 50%;
+		flex: 0 0 33.333%;
 		@media (max-width: #{$md3 + em}) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: #{$md4 + em}) {
 			flex: 0 1 100%;
 			margin: 0 auto;
 		}
@@ -195,13 +205,17 @@
 	}
 }
 .sidebar-filters {
-	background: #ffffff;
-	border: 1px solid #e3e3e3;
-	box-sizing: border-box;
-	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
-	border-radius: 5px;
+	@media (max-width: #{$md3 + em}) {
+		background: #ffffff;
+		border: 1px solid #e3e3e3;
+		box-sizing: border-box;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+		border-radius: 5px;
+	}
 	&__container {
-		padding: 25px 15px;
+		@media (max-width: #{$md3 + em}) {
+			padding: 25px 15px;
+		}
 	}
 	&__search {
 		&:not(:last-child) {
