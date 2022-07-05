@@ -33,6 +33,9 @@
 		// 	}
 		// }
 	}
+	&__contacts {
+		@include adaptiv-value(margin-bottom, 80, 69.5, 1);
+	}
 }
 .work-new {
 	// .work-new__container

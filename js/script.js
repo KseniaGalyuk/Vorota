@@ -1363,6 +1363,18 @@ if ((window.innerWidth <= 1092)) {
 		elem.removeAttribute('data-simplebar');
 	});
 } else {
+	// выравнивание высоты
+	const lists = $('.catalog-header__list');
+	const catalogWrapper = $('.catalog-header__list-wrapper')
+	let listsHeight = 0;
+	lists.each(function () {
+		const thisHeight = $(this).height();
+		if (thisHeight > listsHeight) {
+			listsHeight = thisHeight;
+		}
+	})
+	lists.css('height', `${listsHeight}px`)
+	catalogWrapper.css('height', `calc(${listsHeight}px + 55px + 28px)`)
 	// наведение на десктопах
 	const activeItem = $('.catalog-header__item._active');
 	const catalogItems = $('.catalog-header__item');
@@ -1397,16 +1409,6 @@ if ((window.innerWidth <= 1092)) {
 		const $this = $(this);
 		$this.addClass('_active');
 	})
-	// catalogItemsOne.on('mouseleave', function () {
-	// 	catalogItems.removeClass('_active');
-	// })
-	// catalogItemsTwo.on('mouseleave', function () {
-	// 	catalogItemsTwo.removeClass('_active');
-	// 	catalogItemsThree.removeClass('_active');
-	// })
-	// catalogItemsThree.on('mouseleave', function () {
-	// 	catalogItemsThree.removeClass('_active');
-	// })
 	$('.catalog-header__body').on('mouseleave', function () {
 		catalogItems.removeClass('_active');
 		activeItem.addClass('_active');

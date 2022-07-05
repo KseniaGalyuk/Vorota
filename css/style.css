@@ -3800,7 +3800,6 @@ body._lock {
 @media (min-width: 1092px) {
   .catalog-header__list {
     position: relative;
-    height: 100%;
     display: inline-block;
     width: 210px;
   }
@@ -3949,7 +3948,6 @@ body._lock {
 
 @media (min-width: 1092px) {
   .catalog-header__list-wrapper {
-    height: 490px;
     border: 1px solid #e1e1e1;
     -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
@@ -6694,6 +6692,17 @@ body._lock {
 
 @media (max-width: 1080px) {
   .works__work {
+    margin-bottom: -webkit-calc(69.5px + 10.5 * ((100vw - 320px) / 760));
+    margin-bottom: calc(69.5px + 10.5 * ((100vw - 320px) / 760));
+  }
+}
+
+.works__contacts {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 1080px) {
+  .works__contacts {
     margin-bottom: -webkit-calc(69.5px + 10.5 * ((100vw - 320px) / 760));
     margin-bottom: calc(69.5px + 10.5 * ((100vw - 320px) / 760));
   }
