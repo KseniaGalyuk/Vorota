@@ -1391,7 +1391,9 @@ if ((window.innerWidth <= 1092)) {
 		}
 		if (childItem[0]) {
 			childItem[0].classList.add('_active');
-			childItem[0].nextElementSibling.classList.remove('_active');
+			if (childItem[0].nextElementSibling) {
+				childItem[0].nextElementSibling.classList.remove('_active');
+			}
 		}
 	})
 	catalogItemsTwo.on('mouseenter', function () {
