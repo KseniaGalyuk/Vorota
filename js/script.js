@@ -1365,9 +1365,16 @@ if ((window.innerWidth <= 1092)) {
 } else {
 	// выравнивание высоты
 	const lists = $('.catalog-header__list');
+	const jkgk = $('.catalog-header__sublist');
 	const catalogWrapper = $('.catalog-header__list-wrapper')
 	let listsHeight = 0;
 	lists.each(function () {
+		const thisHeight = $(this).height();
+		if (thisHeight > listsHeight) {
+			listsHeight = thisHeight;
+		}
+	})
+	jkgk.each(function () {
 		const thisHeight = $(this).height();
 		if (thisHeight > listsHeight) {
 			listsHeight = thisHeight;

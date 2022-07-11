@@ -332,10 +332,8 @@
 	&__body {
 		@media (min-width: #{$md1 + px}) {
 			pointer-events: none;
-			transition: all 0.3s ease 0s;
 			opacity: 0;
 			visibility: hidden;
-			top: 100%;
 			top: calc(100% - 15px);
 			z-index: 500;
 			position: absolute;
@@ -343,6 +341,7 @@
 			left: 0;
 			padding-top: 15px;
 			cursor: default;
+			transition: all 0.3s ease 0s;
 		}
 		@media (max-width: #{$md1 + px}) {
 			position: fixed;
@@ -424,12 +423,10 @@
 	&__link {
 		display: flex;
 		align-items: center;
-		transition: all 0.3s ease 0s;
 		font-weight: 400;
 		font-size: 16/16 * 1rem;
 		line-height: 1;
 		color: $lightBlack;
-		transition: all 0.3s ease 0s;
 		@media (min-width: #{$md1 + px}) {
 			min-height: 40px;
 			padding: 12px 10px;
@@ -458,13 +455,11 @@
 	}
 	&__sublist {
 		@media (min-width: #{$md1 + px}) {
-			// height: 100%;
 			position: absolute;
-			transition: all 0.3s ease 0s;
 			opacity: 0;
 			visibility: hidden;
 			left: calc(100% - 20px);
-			left: 100%;
+			left: 99.8%;
 			top: 0px;
 			z-index: 10;
 		}
@@ -476,7 +471,6 @@
 	}
 	&__list-wrapper {
 		@media (min-width: #{$md1 + px}) {
-			// height: 490px;
 			border: 1px solid #e1e1e1;
 			box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
 			border-radius: 0 0 15px 15px;

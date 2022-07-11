@@ -3755,12 +3755,8 @@ body._lock {
 @media (min-width: 1092px) {
   .catalog-header__body {
     pointer-events: none;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
     opacity: 0;
     visibility: hidden;
-    top: 100%;
     top: -webkit-calc(100% - 15px);
     top: calc(100% - 15px);
     z-index: 500;
@@ -3769,6 +3765,9 @@ body._lock {
     left: 0;
     padding-top: 15px;
     cursor: default;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 }
 
@@ -3800,6 +3799,7 @@ body._lock {
 @media (min-width: 1092px) {
   .catalog-header__list {
     position: relative;
+    height: 100%;
     display: inline-block;
     width: 210px;
   }
@@ -3872,14 +3872,10 @@ body._lock {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1;
   color: #27282e;
-  transition: all 0.3s ease 0s;
 }
 
 @media (min-width: 1092px) {
@@ -3922,16 +3918,12 @@ body._lock {
 
 @media (min-width: 1092px) {
   .catalog-header__sublist {
-    height: 100%;
     position: absolute;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
     opacity: 0;
     visibility: hidden;
     left: -webkit-calc(100% - 20px);
     left: calc(100% - 20px);
-    left: 100%;
+    left: 99.8%;
     top: 0px;
     z-index: 10;
   }
