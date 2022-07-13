@@ -36,6 +36,12 @@
 		top: 0;
 		height: 10px;
 	}
+	@media (max-width: #{$md3 + em}) {
+		height: 5px;
+		.simplebar-scrollbar {
+			height: 5px;
+		}
+	}
 	.simplebar-scrollbar:before {
 		left: 0;
 		right: 0;
@@ -46,6 +52,9 @@
 .simplebar-track.simplebar-vertical {
 	background: #ededed;
 	width: 10px;
+	@media (max-width: #{$md3 + em}) {
+		width: 5px;
+	}
 	border-radius: 20px;
 	.simplebar-scrollbar:before {
 		left: 0;
@@ -1917,29 +1926,38 @@
 	}
 	&__width {
 		position: absolute;
-		top: -10px;
+		bottom: calc(100% + 5px);
 		left: 50%;
-		transform: translateY(-50%);
+		transform: translateX(-50%);
 		white-space: nowrap;
 		font-size: calc(12 / 16 * 1rem);
 		line-height: 100%;
 		color: #27282e;
+		@media (max-width: #{$md1 + px}) {
+			bottom: calc(100% + 1px);
+		}
 	}
 	&__height {
 		position: absolute;
-		left: -10px;
+		right: calc(100% + 9px);
 		top: 50%;
-		transform: translateX(-50%) rotate(-90deg);
+		transform: translateY(-50%) translateX(50%) rotate(-90deg);
 		white-space: nowrap;
 		font-size: calc(12 / 16 * 1rem);
 		line-height: 100%;
 		color: #27282e;
+		@media (max-width: #{$md1 + px}) {
+			right: calc(100% + 6px);
+		}
 	}
 	th,
 	td {
 		padding: 0 30px;
 	}
 	td {
+		&:first-child {
+			text-align: center !important;
+		}
 		border: 1px solid #d8d8d8;
 		&._hover {
 			background: #e6f4f7;
@@ -1949,9 +1967,6 @@
 				background: #e6f4f7;
 			}
 		}
-	}
-	.table-cart__header {
-		height: 41px;
 	}
 	tr {
 		&:not(.table-cart__header) {
@@ -1974,8 +1989,8 @@
 			}
 		}
 	}
-	// .table__header
 	&__header {
+		height: 41px;
 		& th:first-child {
 			padding: 0 48px;
 		}
