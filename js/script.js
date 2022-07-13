@@ -1067,6 +1067,7 @@ const priceTables = document.querySelectorAll('.table');
 const priceSelect = document.querySelector('.price__select select');
 const trs = document.querySelectorAll('tr');
 const tds = document.querySelectorAll('td');
+const tableCart = document.querySelectorAll('.table-cart');
 if (priceControl != null) {
 	priceControl.addEventListener('click', function (e) {
 		if (e.target.classList.contains("price__button")) {
@@ -1095,6 +1096,124 @@ if (priceControl != null) {
 	})
 }
 priceTables.forEach(priceTable => {
+	priceTable.addEventListener('mouseover', function (e) {
+		if (!e.target.classList.contains('table') && !isMobile.any()) {
+			e.target.classList.add('_hover');
+			if (e.target.dataset.tr) {
+				tds.forEach(td => {
+					if (td.dataset.td == e.target.dataset.tr) {
+						td.classList.add('_hover');
+					}
+
+				});
+			} else if (e.target.dataset.td) {
+				tds.forEach(td => {
+					if (td.dataset.tr == e.target.dataset.td) {
+						td.classList.add('_hover');
+					}
+				});
+			}
+			const trParent = e.target.parentElement;
+			trParent.classList.add('_hover');
+			for (let i = trParent.children.length; i > 0; i--) {
+				if (trParent.children[trParent.children.length - i] == e.target) {
+					const table = trParent.parentElement.children;
+
+					for (let index = 0; index < table.length; index++) {
+						const t = table[index];
+
+						for (let y = t.children.length; y >= 0; y--) {
+							if (t.children.length - y == i) {
+								t.children[y].classList.add('_hover');
+							}
+						}
+					}
+				}
+			}
+		}
+	})
+	priceTable.addEventListener('mouseout', function (e) {
+		if (!e.target.classList.contains('table') && !isMobile.any()) {
+			e.target.classList.remove('_hover');
+			if (e.target.dataset.tr) {
+				tds.forEach(td => {
+					if (td.dataset.td == e.target.dataset.tr) {
+						td.classList.remove('_hover');
+					}
+
+				});
+			} else if (e.target.dataset.td) {
+				tds.forEach(td => {
+					if (td.dataset.tr == e.target.dataset.td) {
+						td.classList.remove('_hover');
+					}
+				});
+			}
+			const trParent = e.target.parentElement;
+			trParent.classList.remove('_hover');
+			for (let i = trParent.children.length; i > 0; i--) {
+
+				if (trParent.children[trParent.children.length - i] == e.target) {
+					const table = trParent.parentElement.children;
+
+					for (let index = 0; index < table.length; index++) {
+						const t = table[index];
+						for (let y = t.children.length; y >= 0; y--) {
+
+							if (t.children.length - y == i) {
+								t.children[y].classList.remove('_hover');
+							}
+						}
+					}
+				}
+			}
+		}
+	})
+	priceTable.addEventListener('click', function (e) {
+		if (!e.target.classList.contains('table') && isMobile.any()) {
+			trs.forEach(tr => {
+				tr.classList.remove('_active');
+				const trChilds = tr.children
+				for (let index = 0; index < trChilds.length; index++) {
+					trChilds[index].classList.remove('_active');
+				}
+			});
+			e.target.classList.add('_active');
+			if (e.target.dataset.tr) {
+				tds.forEach(td => {
+					if (td.dataset.td == e.target.dataset.tr) {
+						td.classList.add('_active');
+					}
+
+				});
+			} else if (e.target.dataset.td) {
+				tds.forEach(td => {
+					if (td.dataset.tr == e.target.dataset.td) {
+						td.classList.add('_active');
+					}
+				});
+			}
+			const trParent = e.target.parentElement;
+			trParent.classList.add('_active');
+			for (let i = trParent.children.length; i > 0; i--) {
+				if (trParent.children[trParent.children.length - i] == e.target) {
+					const table = trParent.parentElement.children;
+
+					for (let index = 0; index < table.length; index++) {
+						const t = table[index];
+
+						for (let y = t.children.length; y >= 0; y--) {
+							if (t.children.length - y == i) {
+								t.children[y].classList.add('_active');
+							}
+						}
+					}
+				}
+			}
+		}
+	})
+});
+tableCart.forEach(priceTable => {
 	priceTable.addEventListener('mouseover', function (e) {
 		if (!e.target.classList.contains('table') && !isMobile.any()) {
 			e.target.classList.add('_hover');

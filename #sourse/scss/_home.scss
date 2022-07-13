@@ -182,11 +182,21 @@
 .order {
 	position: relative;
 	color: #ffffff;
+	& > img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		top: 0;
+		left: 0;
+		z-index: 1;
+	}
 	&::before {
 		content: "";
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		z-index: 2;
 		background: radial-gradient(
 			94.08% 1081.11% at 94.08% 18.5%,
 			rgba(11, 90, 185, 0.9) 0%,
@@ -198,7 +208,7 @@
 		padding-top: 30px;
 		padding-bottom: 35px;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		@media (max-width: #{$md2 + em}) {
 			max-width: 700px;
 			margin: 0 auto;

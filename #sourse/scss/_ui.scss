@@ -30,11 +30,11 @@
 // Скроллбар
 .simplebar-track.simplebar-horizontal {
 	background: #ededed;
-	height: 4px;
+	height: 10px;
 	border-radius: 20px;
 	.simplebar-scrollbar {
 		top: 0;
-		height: 4px;
+		height: 10px;
 	}
 	.simplebar-scrollbar:before {
 		left: 0;
@@ -45,7 +45,7 @@
 }
 .simplebar-track.simplebar-vertical {
 	background: #ededed;
-	width: 4px;
+	width: 10px;
 	border-radius: 20px;
 	.simplebar-scrollbar:before {
 		left: 0;
@@ -57,10 +57,11 @@
 .simplebar-scrollbar:before {
 	background: $blueOriginal;
 	border-radius: 20px;
+	opacity: 1 !important;
 }
 .simplebar-scrollbar.simplebar-visible::before {
 	transition: all 0.3s ease 0s;
-	opacity: 1;
+	opacity: 1 !important;
 }
 
 .btn {
@@ -1508,7 +1509,7 @@
 	overflow: hidden;
 	border-collapse: collapse;
 	align-items: center;
-	border-radius: 15px;
+	border-radius: 15px 15px 0 0;
 	tr {
 		&._hover {
 			& > *:not(th) {
@@ -1557,6 +1558,9 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
+	}
+	.table__header {
+		height: 41px;
 	}
 	&__icon {
 		margin-right: 10px;
@@ -1898,3 +1902,86 @@
 	}
 }
 //</ОБЩИЕ БЛОКИ>====================================================================================================
+.table-cart {
+	margin: 0 auto;
+	box-sizing: border-box;
+	border-collapse: collapse;
+	font-size: calc(16 / 16 * 1rem);
+	text-align: center;
+	border-radius: 5px 5px 0px 0px;
+	overflow: hidden;
+	border-spacing: 0px !important;
+	&__wrapper {
+		max-height: 680px;
+		padding: 0 15px 15px 0;
+	}
+	&__width {
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		transform: translateY(-50%);
+		white-space: nowrap;
+		font-size: calc(12 / 16 * 1rem);
+		line-height: 100%;
+		color: #27282e;
+	}
+	&__height {
+		position: absolute;
+		left: -10px;
+		top: 50%;
+		transform: translateX(-50%) rotate(-90deg);
+		white-space: nowrap;
+		font-size: calc(12 / 16 * 1rem);
+		line-height: 100%;
+		color: #27282e;
+	}
+	th,
+	td {
+		padding: 0 30px;
+	}
+	td {
+		border: 1px solid #d8d8d8;
+		&._hover {
+			background: #e6f4f7;
+		}
+		&._active {
+			@media (max-width: #{$md3 + em}) {
+				background: #e6f4f7;
+			}
+		}
+	}
+	.table-cart__header {
+		height: 41px;
+	}
+	tr {
+		&:not(.table-cart__header) {
+			border: 1px solid #d8d8d8;
+			height: 51px;
+		}
+		& td:first-child {
+			padding: 0 48px;
+		}
+		&._hover {
+			& > *:not(th) {
+				background: #e6f4f7;
+			}
+		}
+		&._active {
+			@media (max-width: #{$md3 + em}) {
+				& > *:not(th) {
+					background: #e6f4f7;
+				}
+			}
+		}
+	}
+	// .table__header
+	&__header {
+		& th:first-child {
+			padding: 0 48px;
+		}
+		background: #0b5ab9;
+		color: #fff;
+		border: solid 1px #0b5ab9;
+		height: 41px;
+	}
+}
